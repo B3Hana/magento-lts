@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-// total 5720 errors
+// total 5726 errors
 
 $ignoreErrors = [];
 $ignoreErrors[] = [
@@ -1614,6 +1614,11 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid.php',
 ];
 $ignoreErrors[] = [
+    'rawMessage' => 'Method Mage_Adminhtml_Block_Widget_Grid::validateColumnFilterCallback() has parameter $callback with no value type specified in iterable type array.',
+    'count' => 1,
+    'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid.php',
+];
+$ignoreErrors[] = [
     'rawMessage' => 'Property Mage_Adminhtml_Block_Widget_Grid::$_columns type has no value type specified in iterable type array.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid.php',
@@ -1659,6 +1664,11 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid/Column.php',
 ];
 $ignoreErrors[] = [
+    'rawMessage' => 'Class Mage_Adminhtml_Block_Widget_Grid_Column has PHPDoc tag @method for method getFrameCallback() return type with no value type specified in iterable type array.',
+    'count' => 1,
+    'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid/Column.php',
+];
+$ignoreErrors[] = [
     'rawMessage' => 'Class Mage_Adminhtml_Block_Widget_Grid_Column has PHPDoc tag @method for method getSelected() return type with no value type specified in iterable type array.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid/Column.php',
@@ -1670,6 +1680,16 @@ $ignoreErrors[] = [
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Class Mage_Adminhtml_Block_Widget_Grid_Column has PHPDoc tag @method for method setActions() parameter #1 $value with no value type specified in iterable type array.',
+    'count' => 1,
+    'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid/Column.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Class Mage_Adminhtml_Block_Widget_Grid_Column has PHPDoc tag @method for method setFilterConditionCallback() parameter #1 $value with no value type specified in iterable type array.',
+    'count' => 1,
+    'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid/Column.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Class Mage_Adminhtml_Block_Widget_Grid_Column has PHPDoc tag @method for method setFrameCallback() parameter #1 $value with no value type specified in iterable type array.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid/Column.php',
 ];
@@ -28587,6 +28607,16 @@ $ignoreErrors[] = [
     'rawMessage' => 'Method OpenMage\\Tests\\Unit\\OpenMageTest::getMockWithCalledMethods() has parameter $methods with no value type specified in iterable type array.',
     'count' => 1,
     'path' => __DIR__ . '/../tests/unit/OpenMageTest.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Method OpenMage\\Tests\\Unit\\Varien\\Object_\\MapperTest::testAccumulateByMap() has parameter $defaults with no value type specified in iterable type array.',
+    'count' => 1,
+    'path' => __DIR__ . '/../tests/unit/Varien/Object_/MapperTest.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Method OpenMage\\Tests\\Unit\\Varien\\Object_\\MapperTest::testAccumulateByMap() has parameter $map with no value type specified in iterable type array.',
+    'count' => 1,
+    'path' => __DIR__ . '/../tests/unit/Varien/Object_/MapperTest.php',
 ];
 
 return ['parameters' => ['ignoreErrors' => $ignoreErrors]];

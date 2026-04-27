@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-// total 1978 errors
+// total 1976 errors
 
 $ignoreErrors = [];
 $ignoreErrors[] = [
@@ -9350,16 +9350,6 @@ $ignoreErrors[] = [
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Method Varien_Filter_Template::includeDirective() has no return type specified.',
-    'count' => 1,
-    'path' => __DIR__ . '/../lib/Varien/Filter/Template.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Method Varien_Filter_Template::setIncludeProcessor() has no return type specified.',
-    'count' => 1,
-    'path' => __DIR__ . '/../lib/Varien/Filter/Template.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Method Varien_Filter_Template::setTemplateProcessor() has no return type specified.',
     'count' => 1,
     'path' => __DIR__ . '/../lib/Varien/Filter/Template.php',
 ];

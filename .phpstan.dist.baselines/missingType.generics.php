@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-// total 319 errors
+// total 320 errors
 
 $ignoreErrors = [];
 $ignoreErrors[] = [
@@ -1597,6 +1597,11 @@ $ignoreErrors[] = [
     'rawMessage' => 'Method OpenMage\\Tests\\Unit\\Varien\\ObjectTest::provideToStringData() return type with generic class Generator does not specify its types: TKey, TValue, TSend, TReturn',
     'count' => 1,
     'path' => __DIR__ . '/../tests/unit/Varien/ObjectTest.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Method OpenMage\\Tests\\Unit\\Varien\\Object_\\MapperTest::provideAccumulateByMapData() return type with generic class Generator does not specify its types: TKey, TValue, TSend, TReturn',
+    'count' => 1,
+    'path' => __DIR__ . '/../tests/unit/Varien/Object_/MapperTest.php',
 ];
 
 return ['parameters' => ['ignoreErrors' => $ignoreErrors]];

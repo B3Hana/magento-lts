@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-// total 692 errors
+// total 690 errors
 
 $ignoreErrors = [];
 $ignoreErrors[] = [
@@ -3324,16 +3324,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../lib/Varien/Filter/FormElementName.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Method Varien_Filter_Template::getIncludeProcessor() should return array|null but returns (array&callable)|(callable&string)|null.',
-    'count' => 1,
-    'path' => __DIR__ . '/../lib/Varien/Filter/Template.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Method Varien_Filter_Template::getTemplateProcessor() should return array|null but returns (array&callable)|(callable&string)|null.',
-    'count' => 1,
-    'path' => __DIR__ . '/../lib/Varien/Filter/Template.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Method Varien_Filter_Template_Simple::filter() should return string but returns string|null.',
     'count' => 1,
     'path' => __DIR__ . '/../lib/Varien/Filter/Template/Simple.php',
@@ -3384,7 +3374,7 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../lib/Varien/Object.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Method Varien_Object_Mapper::accumulateByMap() should return array|Varien_Object but returns array|(callable)|object.',
+    'rawMessage' => 'Method Varien_Object_Mapper::accumulateByMap() should return array|Varien_Object but returns array|object.',
     'count' => 1,
     'path' => __DIR__ . '/../lib/Varien/Object/Mapper.php',
 ];

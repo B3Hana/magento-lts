@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-// total 35603 errors
+// total 35612 errors
 
 return ['includes' => [
     __DIR__ . '/argument.type.php',

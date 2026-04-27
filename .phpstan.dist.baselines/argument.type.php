@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-// total 2171 errors
+// total 2174 errors
 
 $ignoreErrors = [];
 $ignoreErrors[] = [
@@ -449,7 +449,7 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Parameter #1 $callback of function call_user_func expects callable(): mixed, array<mixed, mixed> given.',
+    'rawMessage' => 'Parameter #1 $callback of function call_user_func expects callable(): mixed, array<mixed, mixed>|Closure given.',
     'count' => 2,
     'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Widget/Grid/Column.php',
 ];
@@ -3824,7 +3824,7 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Core/Model/Translate/Inline.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Parameter #1 $callback of function call_user_func expects callable(): mixed, array|string given.',
+    'rawMessage' => 'Parameter #1 $callback of function call_user_func expects callable(): mixed, array|Closure|string given.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Core/Model/Translate/Inline.php',
 ];
@@ -5117,6 +5117,16 @@ $ignoreErrors[] = [
     'rawMessage' => 'Parameter #2 of function sprintf is expected to be float by placeholder #1 ("%%.2F"), float|int|string given.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Paypal/Model/Hostedpro/Request.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Parameter #1 $source of static method Varien_Object_Mapper::accumulateByMap() expects array|Varien_Object, array|(callable) given.',
+    'count' => 1,
+    'path' => __DIR__ . '/../app/code/core/Mage/Paypal/Model/Info.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Parameter #2 $target of static method Varien_Object_Mapper::accumulateByMap() expects array|Varien_Object, array|(callable)|Varien_Object given.',
+    'count' => 1,
+    'path' => __DIR__ . '/../app/code/core/Mage/Paypal/Model/Info.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Parameter #1 $array of function end expects array|object, list<string>|false given.',
@@ -8299,6 +8309,11 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../lib/Varien/Data/Collection/Db.php',
 ];
 $ignoreErrors[] = [
+    'rawMessage' => 'Parameter #2 $callback of function usort expects callable(array, array): int, Closure(array, array): (int|null) given.',
+    'count' => 1,
+    'path' => __DIR__ . '/../lib/Varien/Data/Collection/Filesystem.php',
+];
+$ignoreErrors[] = [
     'rawMessage' => 'Parameter #1 $element of method Varien_Data_Form_Abstract::addElement() expects Varien_Data_Form_Element_Abstract, object given.',
     'count' => 1,
     'path' => __DIR__ . '/../lib/Varien/Data/Form/Abstract.php',
@@ -8369,7 +8384,7 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../lib/Varien/Date.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Parameter #1 $callback of function array_map expects (callable(int|string): mixed)|null, array{$this(Varien_Db_Adapter_Pdo_Mysql), \'quoteIdentifier\'} given.',
+    'rawMessage' => 'Parameter #1 $callback of function array_map expects (callable(int|string): mixed)|null, Closure(array|string|Zend_Db_Expr, bool=): string given.',
     'count' => 1,
     'path' => __DIR__ . '/../lib/Varien/Db/Adapter/Pdo/Mysql.php',
 ];
@@ -8499,7 +8514,7 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../lib/Varien/File/Uploader.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Parameter #1 $callback of function call_user_func expects callable(): mixed, non-empty-array given.',
+    'rawMessage' => 'Parameter #1 $callback of function call_user_func expects callable(): mixed, non-empty-array|Closure given.',
     'count' => 2,
     'path' => __DIR__ . '/../lib/Varien/Filter/Template.php',
 ];
@@ -8914,7 +8929,7 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../lib/Varien/Object.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Parameter #2 $array of function array_key_exists expects array, array|(callable)|object given.',
+    'rawMessage' => 'Parameter #2 $array of function array_key_exists expects array, array|object given.',
     'count' => 1,
     'path' => __DIR__ . '/../lib/Varien/Object/Mapper.php',
 ];

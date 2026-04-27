@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-// total 571 errors
+// total 574 errors
 
 $ignoreErrors = [];
 $ignoreErrors[] = [
@@ -2857,6 +2857,21 @@ $ignoreErrors[] = [
     'rawMessage' => 'Method OpenMage\\Tests\\Unit\\Mage\\Usa\\Helper\\DataTest::testConvertMeasureWeight() has parameter $value with no type specified.',
     'count' => 1,
     'path' => __DIR__ . '/../tests/unit/Mage/Usa/Helper/DataTest.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Method OpenMage\\Tests\\Unit\\Varien\\Object_\\MapperTest::testAccumulateByMap() has parameter $expectedResult with no type specified.',
+    'count' => 1,
+    'path' => __DIR__ . '/../tests/unit/Varien/Object_/MapperTest.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Method OpenMage\\Tests\\Unit\\Varien\\Object_\\MapperTest::testAccumulateByMap() has parameter $source with no type specified.',
+    'count' => 1,
+    'path' => __DIR__ . '/../tests/unit/Varien/Object_/MapperTest.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Method OpenMage\\Tests\\Unit\\Varien\\Object_\\MapperTest::testAccumulateByMap() has parameter $target with no type specified.',
+    'count' => 1,
+    'path' => __DIR__ . '/../tests/unit/Varien/Object_/MapperTest.php',
 ];
 
 return ['parameters' => ['ignoreErrors' => $ignoreErrors]];

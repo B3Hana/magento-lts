@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-// total 2228 errors
+// total 2226 errors
 
 $ignoreErrors = [];
 $ignoreErrors[] = [
@@ -7342,11 +7342,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Only booleans are allowed in a negated boolean, mixed given.',
     'count' => 1,
     'path' => __DIR__ . '/../lib/Varien/Filter/FormElementName.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Only booleans are allowed in a negated boolean, array|null given.',
-    'count' => 2,
-    'path' => __DIR__ . '/../lib/Varien/Filter/Template.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Only booleans are allowed in a negated boolean, string|false given.',

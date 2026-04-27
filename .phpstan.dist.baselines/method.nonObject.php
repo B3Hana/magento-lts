@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-// total 2168 errors
+// total 2170 errors
 
 $ignoreErrors = [];
 $ignoreErrors[] = [
@@ -7279,6 +7279,11 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../lib/Varien/Db/Statement/Pdo/Mysql.php',
 ];
 $ignoreErrors[] = [
+    'rawMessage' => 'Cannot call method hasData() on array|object.',
+    'count' => 1,
+    'path' => __DIR__ . '/../lib/Varien/Object/Mapper.php',
+];
+$ignoreErrors[] = [
     'rawMessage' => 'Cannot call method asNiceXml() on Varien_Simplexml_Element|false.',
     'count' => 1,
     'path' => __DIR__ . '/../lib/Varien/Simplexml/Config.php',
@@ -7292,6 +7297,11 @@ $ignoreErrors[] = [
     'rawMessage' => 'Cannot call method getCache() on Mage_Core_Model_Config|null.',
     'count' => 6,
     'path' => __DIR__ . '/../tests/unit/Mage/Core/Model/Purifier/DefinitionCacheTest.php',
+];
+$ignoreErrors[] = [
+    'rawMessage' => 'Cannot call method getData() on array|Varien_Object.',
+    'count' => 1,
+    'path' => __DIR__ . '/../tests/unit/Varien/Object_/MapperTest.php',
 ];
 
 return ['parameters' => ['ignoreErrors' => $ignoreErrors]];
