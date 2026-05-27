@@ -35,6 +35,11 @@
 class Mage_CatalogIndex_Model_Price extends Mage_Core_Model_Abstract
 {
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'catalogindex_price';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

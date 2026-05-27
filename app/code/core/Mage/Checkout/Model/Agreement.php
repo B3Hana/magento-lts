@@ -33,6 +33,11 @@ declare(strict_types=1);
 class Mage_Checkout_Model_Agreement extends Mage_Core_Model_Abstract
 {
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'checkout_agreement';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

@@ -39,6 +39,11 @@ class Mage_Cms_Model_Block extends Mage_Core_Model_Abstract
     protected $_cacheTag = 'cms_block';
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'cms_block';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

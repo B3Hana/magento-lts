@@ -30,6 +30,11 @@ declare(strict_types=1);
 class Mage_Eav_Model_Entity_Attribute_Group extends Mage_Core_Model_Abstract
 {
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'eav_entity_attribute_group';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

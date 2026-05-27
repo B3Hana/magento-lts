@@ -33,6 +33,11 @@
 class Mage_Api_Model_Roles extends Mage_Core_Model_Abstract
 {
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'api_roles';
+
+    /**
      * Filters
      *
      * @var array

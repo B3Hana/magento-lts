@@ -44,6 +44,11 @@ class Mage_CatalogSearch_Model_Fulltext extends Mage_Core_Model_Abstract
     protected $_allowTableChanges = true;
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'catalogsearch_fulltext';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

@@ -26,6 +26,11 @@ class Mage_CatalogIndex_Model_Aggregation extends Mage_Core_Model_Abstract
     public const CACHE_FLAG_NAME   = 'layered_navigation';
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'catalogindex_aggregation';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

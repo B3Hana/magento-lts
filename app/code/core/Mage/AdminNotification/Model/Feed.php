@@ -25,6 +25,11 @@ class Mage_AdminNotification_Model_Feed extends Mage_Core_Model_Abstract
     public const XML_LAST_UPDATE_PATH  = 'system/adminnotification/last_update';
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'adminnotification_feed';
+
+    /**
      * Feed url
      *
      * @var null|string

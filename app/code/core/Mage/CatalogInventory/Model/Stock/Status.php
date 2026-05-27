@@ -32,6 +32,11 @@ class Mage_CatalogInventory_Model_Stock_Status extends Mage_Core_Model_Abstract
     public const STATUS_IN_STOCK           = 1;
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'cataloginventory_stock_status';
+
+    /**
      * Product Type Instances cache
      *
      * @var null|array

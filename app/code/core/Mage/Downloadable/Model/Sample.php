@@ -37,6 +37,11 @@ class Mage_Downloadable_Model_Sample extends Mage_Core_Model_Abstract
     public const XML_PATH_SAMPLES_TITLE = 'catalog/downloadable/samples_title';
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'downloadable_sample';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

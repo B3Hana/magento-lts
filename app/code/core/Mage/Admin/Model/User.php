@@ -100,8 +100,6 @@ class Mage_Admin_Model_User extends Mage_Core_Model_Abstract
     public const HASH_SALT_EMPTY = null;
 
     /**
-     * Model event prefix
-     *
      * @var string
      */
     protected $_eventPrefix = 'admin_user';

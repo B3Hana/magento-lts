@@ -23,6 +23,11 @@
  */
 class Mage_Eav_Model_Entity_Attribute_Option extends Mage_Core_Model_Abstract
 {
+    /**
+     * @var string
+     */
+    protected $_eventPrefix = 'eav_entity_attribute_option';
+
     protected function _construct()
     {
         $this->_init('eav/entity_attribute_option');

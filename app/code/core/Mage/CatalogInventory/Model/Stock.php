@@ -37,6 +37,11 @@ class Mage_CatalogInventory_Model_Stock extends Mage_Core_Model_Abstract
     public const DEFAULT_STOCK_ID          = 1;
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'cataloginventory_stock';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

@@ -71,6 +71,11 @@ class Mage_Downloadable_Model_Link extends Mage_Core_Model_Abstract
     public const LINK_SHAREABLE_CONFIG = 2;
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'downloadable_link';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

@@ -70,6 +70,11 @@ class Mage_CatalogIndex_Model_Indexer extends Mage_Core_Model_Abstract
     protected $_productTypePriority = null;
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'catalogindex_indexer';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

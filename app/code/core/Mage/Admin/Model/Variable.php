@@ -22,6 +22,11 @@
 class Mage_Admin_Model_Variable extends Mage_Core_Model_Abstract
 {
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'admin_variable';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

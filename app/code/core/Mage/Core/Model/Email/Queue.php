@@ -56,6 +56,11 @@ class Mage_Core_Model_Email_Queue extends Mage_Core_Model_Abstract
     protected $_recipients = [];
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'core_email_queue';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

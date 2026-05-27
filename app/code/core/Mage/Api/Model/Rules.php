@@ -29,6 +29,11 @@
 class Mage_Api_Model_Rules extends Mage_Core_Model_Abstract
 {
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'api_rules';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

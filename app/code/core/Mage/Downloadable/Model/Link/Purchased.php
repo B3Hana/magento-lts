@@ -35,6 +35,11 @@
 class Mage_Downloadable_Model_Link_Purchased extends Mage_Core_Model_Abstract
 {
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'downloadable_link_purchased';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

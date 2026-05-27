@@ -52,6 +52,11 @@ class Mage_CatalogIndex_Model_Retreiver extends Mage_Core_Model_Abstract
     protected $_retreivers = [];
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'catalogindex_retreiver';
+
+    /**
      * Retriever factory init, load retriever settings
      */
     protected function _construct()

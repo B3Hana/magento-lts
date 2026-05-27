@@ -30,6 +30,11 @@ class Mage_Wishlist_Model_Item_Option extends Mage_Core_Model_Abstract implement
     protected $_product;
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'wishlist_item_option';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

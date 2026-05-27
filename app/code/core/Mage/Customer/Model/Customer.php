@@ -161,8 +161,6 @@ class Mage_Customer_Model_Customer extends Mage_Core_Model_Abstract
     public const MAXIMUM_PASSWORD_LENGTH = 256;
 
     /**
-     * Model event prefix
-     *
      * @var string
      */
     protected $_eventPrefix = 'customer';

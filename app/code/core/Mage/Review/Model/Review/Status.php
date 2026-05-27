@@ -16,6 +16,11 @@ declare(strict_types=1);
  */
 class Mage_Review_Model_Review_Status extends Mage_Core_Model_Abstract
 {
+    /**
+     * @var string
+     */
+    protected $_eventPrefix = 'review_status';
+
     public function __construct()
     {
         $this->_init('review/review_status');

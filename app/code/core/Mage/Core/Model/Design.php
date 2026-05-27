@@ -28,6 +28,11 @@
 class Mage_Core_Model_Design extends Mage_Core_Model_Abstract
 {
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'core_design';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

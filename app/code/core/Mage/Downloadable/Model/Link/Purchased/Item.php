@@ -59,6 +59,11 @@ class Mage_Downloadable_Model_Link_Purchased_Item extends Mage_Core_Model_Abstra
     public const LINK_STATUS_PAYMENT_REVIEW = 'payment_review';
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'downloadable_link_purchased_item';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

@@ -27,6 +27,11 @@
 class Mage_Bundle_Model_Price_Index extends Mage_Core_Model_Abstract
 {
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'bundle_price_index';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

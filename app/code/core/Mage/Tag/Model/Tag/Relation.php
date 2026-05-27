@@ -48,6 +48,11 @@ class Mage_Tag_Model_Tag_Relation extends Mage_Core_Model_Abstract
     public const ENTITY = 'tag_relation';
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'tag_relation';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

@@ -65,6 +65,11 @@ class Mage_Eav_Model_Entity_Type extends Mage_Core_Model_Abstract
     protected $_sets;
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'eav_entity_type';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

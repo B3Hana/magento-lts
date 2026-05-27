@@ -52,6 +52,11 @@ class Mage_CatalogSearch_Model_Advanced extends Mage_Core_Model_Abstract
     protected $_productCollection;
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'catalogsearch_advanced';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

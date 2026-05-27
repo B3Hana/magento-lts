@@ -36,6 +36,11 @@ declare(strict_types=1);
 class Mage_Api_Model_Role extends Mage_Core_Model_Abstract
 {
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'api_role';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()

@@ -74,8 +74,6 @@ class Mage_Cms_Model_Page extends Mage_Core_Model_Abstract
     protected $_cacheTag         = 'cms_page';
 
     /**
-     * Prefix of model events names
-     *
      * @var string
      */
     protected $_eventPrefix = 'cms_page';

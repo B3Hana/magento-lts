@@ -42,6 +42,11 @@ class Mage_AdminNotification_Model_Inbox extends Mage_Core_Model_Abstract
     public const SEVERITY_NOTICE   = 4;
 
     /**
+     * @var string
+     */
+    protected $_eventPrefix = 'adminnotification_inbox';
+
+    /**
      * @inheritDoc
      */
     protected function _construct()
