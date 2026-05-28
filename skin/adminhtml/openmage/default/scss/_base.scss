@@ -277,21 +277,12 @@
 }
 
 //original selectors
-//.calendar, .calendar table
-%extend_27 {
-  color: $color_dorado_approx;
-  cursor: default;
-  background: $color_link_water_approx;
-  font: 400 12px/1.33 'Open Sans', sans-serif;
-}
-
-//original selectors
 //.calendar td.time .hour, .calendar td.time .minute, .calendar td.time .ampm
 %extend_28 {
   padding: 0 3px 0 4px;
   border: 1px solid $black;
   font-weight: 600;
-  background-color: $color_link_water_approx;
+  background-color: $white;
 }
 
 //original selectors
