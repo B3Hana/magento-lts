@@ -303,15 +303,6 @@
   box-shadow: none;
 }
 
-//original selectors
-//#usermenu li.over ul a, #usermenu ul li a:hover
-%extend_30 {
-  color: $color_dark_grey;
-  text-decoration: none;
-  background: var(--color-main-xs);
-  display: block;
-}
-
 @mixin replaceImage($img,$width,$height){
   padding-left: $width;
   box-sizing: border-box;

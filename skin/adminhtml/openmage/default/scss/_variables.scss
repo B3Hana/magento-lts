@@ -1,5 +1,7 @@
 //colors
 $openmage_base_blue: #3A499D;
+$openmage_base_blue_dark: #273169;
+$openmage_base_blue_text: #202856;
 
 $color_wild_sand_approx: #f6f6f6;
 $color_curious_blue_approx: #269de7;
@@ -9,11 +11,9 @@ $color_alto_approx:  lightgrey;
 $color_gallery_approx: #eee;
 $color_alice_blue_approx: #f0f9ff;
 $color_boulder_approx: #71798e;
-$header_background: #000537;
 $color_silver_approx: #ccc;
 $wild_sand: #f4f4f4;
 $color_gray_approx: #888;
-$black_20_7843: rgba(0, 0, 0, 0.207843);
 $color_martini_approx: #999;
 $black_40: rgba(0, 0, 0, 0.4);
 $color_coral_red_approx: #fa4545;
@@ -30,7 +30,6 @@ $mine_shaft_15: rgba(50, 50, 50, 0.15);
 $color_apple_approx: #56af45;
 $color_casablanca_approx: #f0ad4e;
 $color_dorado_approx: darken($openmage_base_blue,19);
-$color_geyser_approx: #d6e2e5;
 $black_18_0392: rgba(0, 0, 0, 0.180392);
 $color_bahama_blue_approx: #026294;
 $color_cinnabar_approx: #e63a3a;
@@ -90,8 +89,6 @@ $hue: 205;
  300 = purple
 */
 
-$color-main-xs: hsla($hue, 52%, 95%, 1);
-$color-main-m: hsla($hue, 40%, 75%, 1);
 $color-main-xxl: hsla($hue, 20%, 30%, 1);
 
 //urls login
