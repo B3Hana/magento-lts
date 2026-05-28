@@ -68,28 +68,13 @@ $font_3: Arial;
 $font_4: sans-serif;
 
 //colors
-$color_mine_shaft_approx: #2f2f2f;
 $color_silver_chalice_approx: #aaa;
 $color_silver_approx: #c8c8c8;
 $white: #fff;
 $color_alabaster_approx: #f8f8f8;
-$black_25: rgba(0, 0, 0, 0.25);
 $black_50: rgba(0, 0, 0, 0.5);
 $color_gothic_10_approx: rgba(117, 146, 163, 0.1);
 $color_gothic_25_approx: rgba(117, 146, 163, 0.25);
-
-$hue: 205;
-/*
- 205 = default,
-   0 = red,
-  60 = yellow,
- 120 = green,
- 180 = turquoise,
- 240 = blue,
- 300 = purple
-*/
-
-$color-main-xxl: hsla($hue, 20%, 30%, 1);
 
 //urls login
 $url_login_background: url(images/login_background.jpg);
