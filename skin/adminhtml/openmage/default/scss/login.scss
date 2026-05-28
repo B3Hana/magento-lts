@@ -143,7 +143,7 @@ input {
     bottom: 30px;
     left: 0;
     width: 100%;
-    color: $color-white-100;
+    color: $white;
     //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
     text-shadow: 0 0 5px $black_50;
   }
@@ -152,7 +152,7 @@ input {
 .login-form {
   background: $url_2 no-repeat;
   text-align: left;
-  background: $color-white-100;
+  background: $white;
   border: none;
   padding: 40px 50px;
   //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
