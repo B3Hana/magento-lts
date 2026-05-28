@@ -105,7 +105,7 @@
 
       &.today {
         font-weight: 600;
-        color: $color_guardsman_red_approx;
+        color: $color-warning;
       }
     }
 
@@ -196,7 +196,7 @@
 
   td.time {
     border-top: 1px solid $black;
-    padding: 1px 0;
+    padding: 5px 0;
     text-align: center;
     background-color: $color_link_water_approx;
 
@@ -220,15 +220,15 @@
 
     span {
       &.hilite {
-        border-color: $black;
+        border-color: $color_astral_approx;
         background-color: $color_astral_approx;
         color: $white;
       }
 
       &.active {
-        border-color: $red;
+        border-color: $black;
         background-color: $black;
-        color: $color_lime_approx;
+        color: $white;
       }
     }
   }

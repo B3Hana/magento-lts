@@ -3,6 +3,9 @@ $openmage_base_blue: #3A499D;
 $openmage_base_blue_dark: #273169;
 $openmage_base_blue_text: #202856;
 
+$black: #000;
+$white: #fff;
+
 $color_wild_sand_approx: #f6f6f6;
 $color_curious_blue_approx: #269de7;
 $color_astral_approx: #3378a3;
@@ -40,15 +43,10 @@ $color_picton_blue_approx: #34abfa;
 $color_allports_approx: #006aa9;
 $color_fiord_approx: #456;
 $color_your_pink_approx: #fbb;
-$black: #000;
 $color_solitude_approx: #def;
 $color_cornflower_approx: #8fc4e8;
-$color_guardsman_red_approx: #d50000;
 $color_spindle_approx: #b8daf0;
 $color_san_marino_approx: #46a;
-$color_manatee_approx: #889;
-$red: red;
-$color_lime_approx: #a5ff00;
 $color_dark_grey: #2f2f2f;
 
 //spacings
@@ -56,7 +54,7 @@ $menu_padding_v: 9px;
 $menu_padding_h: 12px;
 
 
-$color-warning: $color_guardsman_red_approx;
+$color-warning: #d50000;
 $color-help: #00a9ff;
 $color_action: #0090FF;
 
@@ -70,7 +68,6 @@ $font_4: sans-serif;
 //colors
 $color_silver_chalice_approx: #aaa;
 $color_silver_approx: #c8c8c8;
-$white: #fff;
 $color_alabaster_approx: #f8f8f8;
 $black_50: rgba(0, 0, 0, 0.5);
 $color_gothic_10_approx: rgba(117, 146, 163, 0.1);
