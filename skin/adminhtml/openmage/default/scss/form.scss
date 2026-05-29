@@ -74,7 +74,7 @@ button {
   }
 
   &.cancel {
-    background: $color_cinnabar_approx;
+    background: $openmage_red;
     color: $white;
     padding: 0 13px;
 
@@ -84,12 +84,12 @@ button {
     }
 
     &:hover {
-      background: $color_coral_red_approx;
+      background: $openmage_red_dark;
     }
   }
 
   &.delete {
-    background: $color_cinnabar_approx;
+    background: $openmage_red;
     color: $white;
     padding: 0 13px;
 
@@ -99,7 +99,7 @@ button {
     }
 
     &:hover {
-      background: $color_coral_red_approx;
+      background: $openmage_red_dark;
     }
   }
 
@@ -237,22 +237,22 @@ button {
   }
 
   &.fail {
-    background: $color_cinnabar_approx;
+    background: $openmage_red;
     color: $white;
     padding: 0 13px;
 
     &:hover {
-      background: $color_coral_red_approx;
+      background: $openmage_red_dark;
     }
   }
 
   &.cancel_button {
-    background: $color_cinnabar_approx;
+    background: $openmage_red;
     color: $white;
     padding: 0 13px;
 
     &:hover {
-      background: $color_coral_red_approx;
+      background: $openmage_red_dark;
     }
   }
 
@@ -379,7 +379,7 @@ button[disabled] {
       font-weight: 400;
 
       span.input-counter-error {
-        color: $color_cinnabar_approx;
+        color: $openmage_red;
       }
     }
   }
@@ -418,7 +418,7 @@ td:has(input.swatch-option) {
     display: flex;
     justify-content: center;
     font-size: 10px;
-    background: $color_cinnabar_approx;
+    background: $openmage_red;
     color: $white;
     border-radius: 2px;
   }

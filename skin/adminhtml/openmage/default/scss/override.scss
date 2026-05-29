@@ -70,7 +70,7 @@ a {
   }
 
   &.error span {
-    color: $color_coral_red_approx !important;
+    color: $openmage_red !important;
   }
 }
 
@@ -752,15 +752,15 @@ div {
 }
 
 .error {
-  color: $color_coral_red_approx !important;
+  color: $openmage_red !important;
 }
 
 .required {
-  color: $color_coral_red_approx !important;
+  color: $openmage_red !important;
 }
 
 .validation-advice {
-  color: $color_coral_red_approx !important;
+  color: $openmage_red !important;
   font-size: 12px;
   font-weight: 600 !important;
 }
@@ -796,9 +796,9 @@ div {
   background-image: $url_1 !important;
   background-repeat: no-repeat !important;
   background-size: 23px 23px !important;
-  background-color: $color_merino_approx !important;
+  background-color: $color_alice_blue_approx !important;
   background-position: 8px center !important;
-  border: 1px solid $color_chenin_approx !important;
+  border: 1px solid $color_astral_approx !important;
   color: $color_dark_grey !important;
   a {
     color: $color_dark_grey !important;
@@ -811,27 +811,27 @@ div {
   background-image: $url_2 !important;
   background-repeat: no-repeat !important;
   background-size: 23px 23px !important;
-  background-color: $color_pot_pourri_approx !important;
+  background-color: $openmage_red_light !important;
   background-position: 8px center !important;
-  border: 1px solid $color_sanguine_brown_approx !important;
-  color: $color_sanguine_brown_approx !important;
+  border: 1px solid $openmage_red_dark !important;
+  color: $openmage_red_dark !important;
   a {
-    color: $color_sanguine_brown_approx !important;
+    color: $openmage_red_dark !important;
     text-decoration: underline;
   }
 }
 
 .success-msg {
   @extend %extend_13;
-  background-image: icon-success($color_san_felix_approx) !important;
+  background-image: icon-success($openmage_green_dark) !important;
   background-repeat: no-repeat !important;
   background-size: 16px 16px !important;
-  background-color: $color_chrome_white_approx !important;
+  background-color: $openmage_green_light !important;
   background-position: 8px center !important;
-  border: 1px solid $color_foggy_gray_approx !important;
-  color: $color_san_felix_approx !important;
+  border: 1px solid $openmage_green !important;
+  color: $openmage_green_dark !important;
   a {
-    color: $color_san_felix_approx !important;
+    color: $openmage_green_dark !important;
     text-decoration: underline;
   }
 }
@@ -841,9 +841,9 @@ div {
   background-image: $url_1 !important;
   background-repeat: no-repeat !important;
   background-size: 23px 23px !important;
-  background-color: $color_island_spice_approx !important;
+  background-color: $openmage_yellow_light !important;
   background-position: 8px center !important;
-  border: 1px solid $color_brandy_punch_approx !important;
+  border: 1px solid $openmage_yellow_dark !important;
   color: $color_dark_grey !important;
   a {
     color: $color_dark_grey !important;
@@ -930,7 +930,7 @@ div {
   span {
     @extend %extend_15;
     border: 0;
-    background: $color_apple_approx;
+    background: $openmage_green;
     color: $white;
   }
 }
@@ -941,7 +941,7 @@ div {
   span {
     @extend %extend_15;
     border: 0;
-    background: $color_coral_red_approx;
+    background: $openmage_red;
     color: $white;
   }
 }
@@ -1111,23 +1111,28 @@ table.actions {
 
 a.rule-param-remove {
   img {
-    @include replaceImage(icon-close($color-warning),13px,13px);
+    @include replaceImage(icon-close($openmage_red),13px,13px);
   }
 }
 img.rule-param-add {
-  @include replaceImage(icon-add($color_apple_approx),13px,13px);
+  @include replaceImage(icon-add($openmage_green),13px,13px);
 }
 .address-list li.on {
   background: $white;
 }
 
 ul.tabs a.changed span.changed {
-  background: icon-save($color_apple_approx) !important;
+  background: icon-save($openmage_green) !important;
 }
 
 .notification-global {
-  background: $color_merino_approx icon-warning($color-warning) 27px 5px no-repeat;
+  background: $openmage_yellow_light icon-warning($openmage_red) 27px 5px no-repeat;
   background-size: 15px;
+  border-color: $openmage_yellow;
+
+  .label {
+    color: $openmage_red;
+  }
 }
 
 #page-help-link {
@@ -1181,7 +1186,7 @@ ul.tabs a.changed span.changed {
 
 .export {
   img {
-    @include replaceImage(icon-export($color_apple_approx),19px,19px);
+    @include replaceImage(icon-export($openmage_green),19px,19px);
   }
 }
 
