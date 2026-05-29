@@ -94,18 +94,18 @@ input {
     font: 12px $font_3, $font_4, $font_2;
     border-width: 1px;
     border-style: solid;
-    border-color: $color_silver_chalice_approx;
+    border-color: $color_martini_approx;
     padding: 2px 2px 3px;
     line-height: 18px;
     font-family: $font_0, $font_1;
 
     &:hover {
-      outline: 2px solid $color_gothic_10_approx;
+      outline: 2px solid $color_gallery_approx;
     }
 
     &:focus {
       //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-      box-shadow: 0 0 0 2px $color_gothic_25_approx;
+      outline: 2px solid $color_silver_approx;
     }
 
     &:disabled {

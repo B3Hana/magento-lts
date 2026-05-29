@@ -6,7 +6,7 @@
 @import "base";
 
 .calendar {
-  box-shadow: 0 0 8px $color_gray_approx;
+  box-shadow: 1px 3px 4px $color_silver_approx;
 
   table {
     color: $openmage_base_blue_text;
@@ -114,7 +114,7 @@
     }
 
     .disabled {
-      color: $color_martini_approx;
+      color: $color_silver_approx;
     }
 
     .emptycell {
