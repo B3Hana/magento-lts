@@ -37,25 +37,25 @@ body {
 
 a {
   display: inline;
-  color: $color_curious_blue_approx;
+  color: $openmage_blue;
   text-decoration: none;
 
   &:visited {
-    color: $color_curious_blue_approx;
+    color: $openmage_blue;
   }
 
   &:focus {
-    color: $color_astral_approx;
+    color: $openmage_blue_dark;
     text-decoration: none;
   }
 
   &:hover {
-    color: $color_astral_approx;
+    color: $openmage_blue_dark;
     text-decoration: none;
   }
 
   &:active {
-    color: $color_astral_approx;
+    color: $openmage_blue_dark;
     text-decoration: none;
   }
 
@@ -117,7 +117,7 @@ input {
 
 .form-button {
   @extend %extend_20;
-  background-color: $color_action;
+  background-color: $openmage_blue;
 }
 
 #page-login {

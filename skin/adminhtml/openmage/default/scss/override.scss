@@ -47,25 +47,25 @@ label {
 
 a {
   display: inline;
-  color: $color_curious_blue_approx;
+  color: $openmage_blue;
   text-decoration: none;
 
   &:visited {
-    color: $color_curious_blue_approx;
+    color: $openmage_blue;
   }
 
   &:focus {
-    color: $color_astral_approx;
+    color: $openmage_blue_dark;
     text-decoration: none;
   }
 
   &:hover {
-    color: $color_astral_approx;
+    color: $openmage_blue_dark;
     text-decoration: none;
   }
 
   &:active {
-    color: $color_astral_approx;
+    color: $openmage_blue_dark;
     text-decoration: none;
   }
 
@@ -247,15 +247,15 @@ small {
 
     tbody tr {
       &.selected td {
-        background: $color_alice_blue_approx;
+        background: $openmage_blue_light;
       }
 
       &:hover td {
-        background: $color_alice_blue_approx;
+        background: $openmage_blue_light;
       }
 
       &:nth-child(odd):hover td {
-        background: $color_alice_blue_approx;
+        background: $openmage_blue_light;
       }
     }
   }
@@ -306,7 +306,7 @@ small {
       }
 
       .date img {
-        @include replaceImage(icon-calendar($color_action),17px,17px);
+        @include replaceImage(icon-calendar($openmage_blue),17px,17px);
         margin-top: 5px;
       }
     }
@@ -395,7 +395,7 @@ small {
     }
 
     tr.selected td.sorted {
-      background: darken($color_alice_blue_approx, 3%) !important;
+      background: darken($openmage_blue_light, 3%) !important;
     }
   }
 
@@ -796,9 +796,9 @@ div {
   background-image: $url_1 !important;
   background-repeat: no-repeat !important;
   background-size: 23px 23px !important;
-  background-color: $color_alice_blue_approx !important;
+  background-color: $openmage_blue_light !important;
   background-position: 8px center !important;
-  border: 1px solid $color_astral_approx !important;
+  border: 1px solid $openmage_blue_dark !important;
   color: $color_dark_grey !important;
   a {
     color: $color_dark_grey !important;
@@ -887,7 +887,7 @@ div {
   .login-form {
     background: white;
     .form-button,button {
-      background: $color_action;
+      background: $openmage_blue;
     }
   }
   .bottom {
@@ -1146,7 +1146,7 @@ ul.tabs a.changed span.changed {
       color:$white;
     }
     a {
-      background: $color_action !important;
+      background: $openmage_blue !important;
       border: none;
       margin-top: 1px;
       span{
@@ -1159,7 +1159,7 @@ ul.tabs a.changed span.changed {
     background: $white;
     .read-more {
       a {
-        background: icon-arrow-right($color_action)  no-repeat 0 50%;
+        background: icon-arrow-right($openmage_blue)  no-repeat 0 50%;
         background-size: 13px;
       }
     }
@@ -1168,17 +1168,17 @@ ul.tabs a.changed span.changed {
 
 .pager {
   img[src$='pager_arrow_left.gif'].arrow {
-      @include replaceImage(icon-arrow-left($color_action),17px,17px);
+      @include replaceImage(icon-arrow-left($openmage_blue),17px,17px);
     }
   img[src$='pager_arrow_right.gif'].arrow {
-      @include replaceImage(icon-arrow-right($color_action),17px,17px);
+      @include replaceImage(icon-arrow-right($openmage_blue),17px,17px);
     }
   img[src$='pager_arrow_left_off.gif'].arrow {
-    @include replaceImage(icon-arrow-left($color_action),17px,17px);
+    @include replaceImage(icon-arrow-left($openmage_blue),17px,17px);
     opacity: 0.5;
   }
   img[src$='pager_arrow_right_off.gif'].arrow {
-    @include replaceImage(icon-arrow-right($color_action),17px,17px);
+    @include replaceImage(icon-arrow-right($openmage_blue),17px,17px);
     opacity: 0.5;
   }
 
@@ -1191,15 +1191,15 @@ ul.tabs a.changed span.changed {
 }
 
 img[src$='grid-cal.gif'] {
-  @include replaceImage(icon-calendar($color_action),17px,17px);
+  @include replaceImage(icon-calendar($openmage_blue),17px,17px);
 }
 
 .link-store-scope {
-  background: icon-help($color-help);
+  background: icon-help($openmage_blue);
 }
 
 .emph, .accent {
-  color: $color_action !important;
+  color: $openmage_blue !important;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {

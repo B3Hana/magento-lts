@@ -181,7 +181,7 @@
   margin: 0;
   background-color: $white;
   height: 26px;
-  color: $color_dorado_approx;
+  color: $openmage_base_blue_text;
   border: 1px solid $color_silver_approx;
   //Instead of the line below you could use @include box-sizing($bs)
   box-sizing: border-box;
@@ -192,7 +192,7 @@
 %extend_19 {
   font-size: 12px;
   font-weight: 400;
-  color: $color_dorado_approx;
+  color: $openmage_base_blue_text;
 }
 
 //original selectors
@@ -236,7 +236,7 @@
 //button.save, button.add, button.ok_button, .form-button.ok_button
 %extend_23 {
   background-image: none;
-  background-color: $color_action;
+  background-color: $openmage_blue;
   padding: 0 13px;
   color: $white;
   border: 0;
@@ -254,7 +254,7 @@
 //original selectors
 //button.save:focus, button.save:active, button.add:focus, button.add:active, button.ok_button:focus, button.ok_button:active, .form-button.ok_button:focus, .form-button.ok_button:active
 %extend_24 {
-  background-color: $color_bahama_blue_approx;
+  background-color: $openmage_blue_dark;
   outline: thin dotted;
   outline-offset: -2px;
   color: $white;

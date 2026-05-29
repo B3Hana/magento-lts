@@ -85,7 +85,7 @@
 
     td {
       &.hilite {
-        background: $color_alice_blue_approx;
+        background: $openmage_blue_light;
         padding: 1px 3px 1px 1px;
         border: 1px solid $openmage_base_blue;
       }
@@ -100,7 +100,7 @@
         border: 1px solid $black;
         padding: 1px 3px 1px 1px;
         background: $white;
-        color: $color_dorado_approx;
+        color: $openmage_base_blue_text;
       }
 
       &.weekend {
@@ -126,10 +126,10 @@
     }
 
     .rowhilite td {
-      background: $color_alice_blue_approx;
+      background: $openmage_blue_light;
 
       &.wn {
-        background: $color_alice_blue_approx;
+        background: $openmage_blue_light;
       }
     }
   }
@@ -227,8 +227,8 @@
 
     span {
       &.hilite {
-        border-color: $color_astral_approx;
-        background-color: $color_astral_approx;
+        border-color: $openmage_blue_dark;
+        background-color: $openmage_blue_dark;
         color: $white;
       }
 
