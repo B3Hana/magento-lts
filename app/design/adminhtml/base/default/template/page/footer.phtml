@@ -9,13 +9,14 @@
 /** @var Mage_Adminhtml_Block_Page_Footer $this */
 ?>
 <p class="bug-report">
-    <?php echo $this->__('Interface Locale: %s', $this->getLanguageSelect()) ?>
+    <label for="<?php echo $this::LANGUAGE_SELECT_ID ?>"><?php echo $this->__('Interface Locale') ?>:</label>
+    <?php echo $this->getLanguageSelect() ?>
 </p>
+<p class="openmage-version"><?php echo $this->__('OpenMage %s', Mage::getOpenMageVersion()) ?></p>
 <p class="legality">
     <a href="<?php echo $this->getOpenMageProjectUrl() ?>" target="_blank"><?php echo $this->__('OpenMage Project') ?></a> |
     <a href="<?php echo $this->getReportIssuesUrl() ?>" target="_blank"><?php echo $this->__('Report Issues') ?></a>
 </p>
-<?php echo $this->__('OpenMage %s', Mage::getOpenMageVersion()) ?>
 <script type="text/javascript">
     function setInterfaceLanguage(evt) {
         var elem = Event.element(evt);

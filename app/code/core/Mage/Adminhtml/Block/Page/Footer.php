@@ -23,6 +23,8 @@ class Mage_Adminhtml_Block_Page_Footer extends Mage_Adminhtml_Block_Template
 
     public const LOCALE_CACHE_TAG      = 'adminhtml';
 
+    public const LANGUAGE_SELECT_ID    = 'interface_locale';
+
     /**
      * @inheritDoc
      */
@@ -69,7 +71,7 @@ class Mage_Adminhtml_Block_Page_Footer extends Mage_Adminhtml_Block_Template
         if (!$html) {
             $html = $this->getLayout()->createBlock('adminhtml/html_select')
                 ->setName('locale')
-                ->setId('interface_locale')
+                ->setId(self::LANGUAGE_SELECT_ID)
                 ->setTitle(Mage::helper('page')->__('Interface Language'))
                 ->setExtraParams('style="width:200px"')
                 ->setValue($locale->getLocaleCode())

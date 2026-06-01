@@ -619,7 +619,7 @@ div.side-col { float:left; width:220px; margin-right:-220px; padding-bottom:25px
 div.main-col { margin-left:220px; min-height:450px; padding:0 0 25px 25px; }
 div.main-col-inner { float:left; /* Fixes some inner clears in the liquid main-col */ width:100%; }
 
-.footer { clear:both; background:url(images/footer_bg.gif) repeat-x #e6e6e6; padding:105px 2.8em 2.8em 2.8em; font-size:.95em; text-align:center; }
+.footer { display:flex; align-items:center; justify-content: space-between; gap:22px; background:url(images/footer_bg.gif) repeat-x #e6e6e6; padding:105px 2.8em 2.8em 2.8em; font-size:.95em; }
 .simple-container-popup { min-height:50px !important; padding:1.8em 2.3em 6em 2.3em; background:url(images/simple_container_bg.gif) repeat-x; }
 
 .page-popup { background:#fff; }
@@ -663,8 +663,8 @@ div.autocomplete ul li.selected { background-color:#dcebf0; }
 div.autocomplete ul li { padding:.5em .7em; min-height:32px; cursor:pointer; text-align:left; color:#2f2f2f; line-height:1.3em; }
 
 /* Footer */
-.footer .bug-report                     { float:left; width:35%; text-align:left; }
-.footer .legality                       { float:right; width:35%; min-height:19px; padding-left:22px; text-align:right; }
+.footer .bug-report                     { width:35%; }
+.footer .legality                       { width:35%; text-align:right; }
 
 /* COLUMNS
 ********************************************************************************************/
@@ -1688,7 +1688,6 @@ dl.accordion dt:after,
 #topnav:after,
 .main:after,
 .container:after,
-.footer:after,
 .middle:after,
 .header:after,
 .box-head:after,
