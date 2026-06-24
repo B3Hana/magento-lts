@@ -345,17 +345,13 @@ label.inline                            { float:none !important; width:auto !imp
 #coupon_container .entry-edit { min-width:310px; }
 
 /* Form Elements */
-input.input-text,input.input-color,textarea,select { border-width:1px; border-style:solid; border-color:#aaa #c8c8c8 #c8c8c8 #aaa; background:#fff; font:12px arial, helvetica, sans-serif; }
-select { min-height:17px; /* to set the height for empty selects */ }
+input.input-text,input.input-color,textarea { border-width:1px; border-style:solid; border-color:#aaa #c8c8c8 #c8c8c8 #aaa; background:#fff; font:12px arial, helvetica, sans-serif; }
 input.input-text,textarea       { padding:2px; }
 input.input-color               { padding:2px; width:222px !important; }
 input.input-color-html5         { width:48px !important; }
 input.qty                       { width:40px !important; }
 input.item-qty                  { width:22px !important; }
 input.price                     { width:50px !important; text-align:right; }
-input[type=text].disabled       { background:#eee; }
-select optgroup                 { font-style:normal; }
-select optgroup option          { padding-left:10px; }
 select optgroup option.even     { background:#f6f6f6; } /* Zebra even-row */
 select.multiselect option       { padding:3px 4px; border-bottom:1px solid #ddd; }
 .checkboxes li                  { margin:0 0 5px !important; }
@@ -404,7 +400,6 @@ select.multiselect option       { padding:3px 4px; border-bottom:1px solid #ddd;
 .fieldset-wide .form-list td.value p.note,
 .fieldset-wide .form-list td.value input.input-text,
 .fieldset-wide .form-list td.value textarea { width:98% !important; }
-/*.fieldset-wide .form-list td.value select { display:block; }*/
 .fieldset-wide .form-list td.scope-label { white-space:nowrap; width:1px; }
 .fieldset-wide .form-list td.note { width:120px; }
 
@@ -1240,9 +1235,6 @@ input.downloads { width:6.5em !important; }
 .sync-indicator span { vertical-align:middle; }
 
 /* Configuration */
-/*fieldset.config td          { padding-top:5px; padding-bottom:5px; }
-fieldset.config input.input-text { width:250px; }
-fieldset.config select.select { width:256px; }*/
 div.tree_item,
 div.tree_item_last          { background-position:left; background-repeat:no-repeat; padding-left:20px; }
 div.tree_item               { background-image:url("../../base/default/images/tree_icons/join.gif"); }
