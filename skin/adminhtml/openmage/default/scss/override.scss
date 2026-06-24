@@ -692,16 +692,19 @@ div {
 }
 
 .massaction {
-  background: none;
+  width:100%;
+  height:26px;
   border: 0;
   font-size: 12px;
 
   td {
-    border-top: 0;
+    width: auto;
+    vertical-align:middle;
     padding: 10px 0;
   }
 
-  .entry-edit fieldset span.form_row, .entry-edit fieldset span.field-row {
+  .entry-edit fieldset span.form_row,
+  .entry-edit fieldset span.field-row {
     padding: 0;
   }
 
