@@ -1,0 +1,71 @@
+@use "../../variables/color";
+
+// ====================
+// Default Inputs
+// ====================
+
+input.input-text,
+textarea,
+select {
+    font: 400 12px/1.33 'Open Sans', sans-serif;
+    display: inline-block;
+    padding: 1px 3px;
+    margin: 0;
+    background: color.$white;
+    height: 26px;
+    color: color.$openmage_base_blue_text;
+    border: 1px solid color.$color_silver_approx;
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+select {
+    &:focus {
+        outline-offset: -2px;
+        outline: 2px dashed color.$openmage_blue_dark;
+    }
+
+    &:disabled,
+    &.disabled {
+        background: color.$color_wild_sand_approx;
+    }
+}
+
+// ====================
+// Input
+// ====================
+
+input {
+    vertical-align: middle;
+
+    &[type="checkbox"],
+    &[type="radio"] {
+        outline-offset: 2px;
+    }
+
+    &.input-text.large {
+        padding: 12px 12px 14px;
+        font-size: 18px;
+    }
+}
+
+// ====================
+// Select
+// ====================
+
+select {
+    &[multiple],
+    &[size] {
+        height: auto;
+    }
+
+    optgroup {
+        font-weight: 600;
+        font-style: normal;
+
+        option {
+            padding-left: 10px;
+        }
+    }
+}

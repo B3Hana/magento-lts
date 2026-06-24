@@ -173,37 +173,6 @@
 }
 
 //original selectors
-//## Forminput.input-text, textarea, select
-%extend_18 {
-  font: 400 12px/1.33 'Open Sans', sans-serif;
-  display: inline-block;
-  padding: 1px 3px;
-  margin: 0;
-  background-color: $white;
-  height: 26px;
-  color: $openmage_base_blue_text;
-  border: 1px solid $color_silver_approx;
-  //Instead of the line below you could use @include box-sizing($bs)
-  box-sizing: border-box;
-}
-
-//original selectors
-//.form-list td.label, .form-list td.label label
-%extend_19 {
-  font-size: 12px;
-  font-weight: 400;
-  color: $openmage_base_blue_text;
-}
-
-//original selectors
-//.field-100 textarea, .field-100 input.input-text
-%extend_26 {
-  float: none;
-  border: 1px solid $color_silver_approx !important;
-  padding: 1px 3px !important;
-}
-
-//original selectors
 //.calendar td.time .hour, .calendar td.time .minute, .calendar td.time .ampm
 %extend_28 {
   padding: 0 3px 0 4px;
