@@ -122,7 +122,7 @@ button {
     }
 
     &:hover {
-      background-color: $openmage_blue_dark;
+      background-color: $openmage_base_blue_dark;
     }
 
     &.disabled {
@@ -148,7 +148,7 @@ button {
     }
 
     &:hover {
-      background-color: $openmage_blue_dark;
+      background-color: $openmage_base_blue_dark;
     }
 
     &.disabled {
@@ -174,7 +174,7 @@ button {
     }
 
     &:hover {
-      background-color: $openmage_blue_dark;
+      background-color: $openmage_base_blue_dark;
     }
 
     &.disabled {
@@ -358,7 +358,7 @@ button[disabled] {
   }
 
   &.scope-label {
-    color: $color_martini_approx;
+    color: $color_dark_grey;
     font-size: 11px;
   }
 

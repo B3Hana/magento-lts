@@ -237,7 +237,7 @@
 //button.save, button.add, button.ok_button, .form-button.ok_button
 %extend_23 {
   background-image: none;
-  background-color: $openmage_blue;
+  background-color: $openmage_base_blue;
   padding: 0 13px;
   color: $white;
   border: 0;
@@ -255,7 +255,7 @@
 //original selectors
 //button.save:focus, button.save:active, button.add:focus, button.add:active, button.ok_button:focus, button.ok_button:active, .form-button.ok_button:focus, .form-button.ok_button:active
 %extend_24 {
-  background-color: $openmage_blue_dark;
+  background-color: $openmage_base_blue_dark;
   outline: thin dotted;
   outline-offset: -2px;
   color: $white;
