@@ -8,6 +8,7 @@ class Mage_Cms_Model_Translate
     protected $_entries;
 
     protected const PATH_BASE = 'app/code/';
+    protected const PATH_DESIGN = 'app/design/';
 
     public function __construct(string $lang = 'en_US', string $module = null)
     {
@@ -17,6 +18,7 @@ class Mage_Cms_Model_Translate
         $this->_initConfig();
         $this->_gatherXmlUsages();
         $this->_gatherPhpUsages();
+        $this->_gatherPhtmlUsages();
     }
 
     protected function _initConfig()
@@ -151,7 +153,7 @@ class Mage_Cms_Model_Translate
                 continue;
             }
 
-            $pattern = "/Mage::helper\(\s*['\"]([^'\"]+)['\"]\s*\)->__\(\s*['\"]([^'\"]+)['\"]/";
+            $pattern = "/Mage::helper\(\s*['\"]([^'\"]+)['\"]\s*\)\s*->__\(\s*['\"]([^'\"]+)['\"]/s";
             if (!preg_match_all($pattern, $contents, $matches, PREG_SET_ORDER)) {
                 continue;
             }
@@ -199,7 +201,47 @@ class Mage_Cms_Model_Translate
             }
 
             // Gather others
+//            $others = [];
+//            if (preg_match_all("/([^\n;]+)->__\(\s*['\"]([^'\"]+)['\"]/", $contents, $otherMatches, PREG_SET_ORDER)) {
+//                foreach ($otherMatches as $match) {
+//                    $fullCall = trim($match[0]);
+//                    if (str_contains($fullCall, '$this->__') || preg_match("/Mage::helper\s*\(/", $fullCall)) {
+//                        continue;
+//                    }
+//                    $others[] = $fullCall;
+//                }
+//            }
+        }
+    }
 
+    protected function _gatherPhtmlUsages()
+    {
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator(BP . DS . rtrim(self::PATH_DESIGN, DS), RecursiveDirectoryIterator::SKIP_DOTS)
+        );
+        $phtmlFiles = array_keys(iterator_to_array(
+            new RegexIterator($iterator, '/\.phtml$/i', RecursiveRegexIterator::MATCH)
+        ));
+
+        foreach ($phtmlFiles as $phtmlFile) {
+            // Gather direct Mage::helper calls.
+            $contents = file_get_contents($phtmlFile);
+            if ($contents === false) {
+                continue;
+            }
+
+            $pattern = "/Mage::helper\(\s*['\"]([^'\"]+)['\"]\s*\)\s*->__\(\s*['\"]([^'\"]+)['\"]/s";
+            if (!preg_match_all($pattern, $contents, $matches, PREG_SET_ORDER)) {
+                continue;
+            }
+
+            foreach ($matches as $match) {
+                $scope  = $match[1];
+                $string = $match[2];
+                if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
+                    $this->_entries[$scope][] = $string;
+                }
+            }
         }
     }
 
