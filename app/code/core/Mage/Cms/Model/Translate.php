@@ -239,7 +239,7 @@ class Mage_Cms_Model_Translate
                             continue 2;
                         }
                     }
-                    $this->_others[] = trim($match[0][0]);
+                    $this->_others[] = ['translation' => trim($match[0][0]), 'type' => 'unidentified'];
                 }
             }
             // DEBUG END
@@ -298,6 +298,8 @@ class Mage_Cms_Model_Translate
                 }
             }
         }
+
+        $diff['_unidentified'] = $this->_others;
 
         $result = '';
         foreach ($diff as $scope => $items) {
