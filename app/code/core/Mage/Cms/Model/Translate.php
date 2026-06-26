@@ -194,7 +194,6 @@ class Mage_Cms_Model_Translate
                 }
             }
 
-            // Gather $this calls
             $scope = null;
             if (preg_match("/\\\$this->setUsedModuleName\(\s*['\"]([^'\"]+)['\"]\s*\)/", $contents, $moduleMatch)) {
                 $scope = $moduleMatch[1];
@@ -219,12 +218,31 @@ class Mage_Cms_Model_Translate
                 }
             }
 
+            // Gather $this calls
             if (preg_match_all("/\\\$this->__\(\s*['\"]([^'\"]+)['\"]/", $contents, $thisMatches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
                 foreach ($thisMatches as $match) {
                     $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
                     $string = $match[1][0];
                     if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
                         $this->_entries[$scope][] = $string;
+                    }
+                }
+            }
+
+            // Gather special case with variable
+            if (preg_match_all("/\\\$(\w+)\s*=\s*Mage::helper\(\s*['\"]([^'\"]+)['\"]\s*\)/", $contents, $assignments, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
+                foreach ($assignments as $assignment) {
+                    $varName = $assignment[1][0];
+                    $scope   = $assignment[2][0];
+                    $varPattern = "/\\\$" . preg_quote($varName, '/') . "\s*->__\(\s*['\"]([^'\"]+)['\"]/";
+                    if (preg_match_all($varPattern, $contents, $varMatches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
+                        foreach ($varMatches as $match) {
+                            $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
+                            $string = $match[1][0];
+                            if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
+                                $this->_entries[$scope][] = $string;
+                            }
+                        }
                     }
                 }
             }
