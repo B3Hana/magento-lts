@@ -165,44 +165,41 @@ class Mage_Cms_Model_Translate
             }
 
             // Gather $this calls
-            $isController = str_contains($phpFile, DS . 'controllers' . DS) || str_contains($phpFile, DS . 'Controller' . DS);
-
-            if ($isController) {
-                $scope = null;
-                if (preg_match("/\\\$this->setUsedModuleName\(\s*['\"]([^'\"]+)['\"]\s*\)/", $contents, $moduleMatch)) {
-                    $scope = $moduleMatch[1];
-                }
-
-                if ($scope === null) {
-                    if (str_contains($phpFile, 'adminhtml') || str_contains($phpFile, 'Adminhtml')) {
-                        $scope = 'adminhtml';
-                    } else {
-                        if (preg_match('/\bclass\s+([A-Za-z_][A-Za-z0-9_]*)/', $contents, $classMatch)) {
-                            $className = $classMatch[1];
-                            $scope = 'frontend';
-                            foreach ($this->_config as $configScope => $config) {
-                                if (str_starts_with($className, $config['module'])) {
-                                    $scope = $configScope;
-                                    break;
-                                }
-                            }
-                        } else {
-                            $scope = 'frontend';
-                        }
-                    }
-                }
-
-                if (preg_match_all("/\\\$this->__\(\s*['\"]([^'\"]+)['\"]/", $contents, $thisMatches, PREG_SET_ORDER)) {
-                    foreach ($thisMatches as $match) {
-                        $string = $match[1];
-                        if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
-                            $this->_entries[$scope][] = $string;
-                        }
-                    }
-                }
-            } else {
-                //todo
+            $scope = null;
+            if (preg_match("/\\\$this->setUsedModuleName\(\s*['\"]([^'\"]+)['\"]\s*\)/", $contents, $moduleMatch)) {
+                $scope = $moduleMatch[1];
             }
+
+            if ($scope === null) {
+                if (str_contains($phpFile, 'adminhtml') || str_contains($phpFile, 'Adminhtml')) {
+                    $scope = 'adminhtml';
+                } else {
+                    if (preg_match('/\bclass\s+([A-Za-z_][A-Za-z0-9_]*)/', $contents, $classMatch)) {
+                        $className = $classMatch[1];
+                        $scope = 'undefined';
+                        foreach ($this->_config as $configScope => $config) {
+                            if (str_starts_with($className, $config['module'])) {
+                                $scope = $configScope;
+                                break;
+                            }
+                        }
+                    } else {
+                        $scope = 'undefined';
+                    }
+                }
+            }
+
+            if (preg_match_all("/\\\$this->__\(\s*['\"]([^'\"]+)['\"]/", $contents, $thisMatches, PREG_SET_ORDER)) {
+                foreach ($thisMatches as $match) {
+                    $string = $match[1];
+                    if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
+                        $this->_entries[$scope][] = $string;
+                    }
+                }
+            }
+
+            // Gather others
+
         }
     }
 
