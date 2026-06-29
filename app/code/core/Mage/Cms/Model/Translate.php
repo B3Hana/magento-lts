@@ -106,35 +106,42 @@ class Mage_Cms_Model_Translate
                     continue;
                 }
 
-                $this->_traverseXmlNode($xml, null);
+                $this->_traverseXmlNode($xml, null, $xmlFile);
             }
         }
 
-        foreach ($this->_entries as $module => $strings) {
-            $this->_entries[$module] = array_values(array_unique($strings));
+        foreach ($this->_entries as $module => $entries) {
+            $seen = [];
+            $this->_entries[$module] = array_values(array_filter($entries, function ($entry) use (&$seen) {
+                if (in_array($entry['translation'], $seen, true)) {
+                    return false;
+                }
+                $seen[] = $entry['translation'];
+                return true;
+            }));
         }
     }
 
-    protected function _traverseXmlNode(SimpleXMLElement $node, ?string $currentModule): void
+    protected function _traverseXmlNode(SimpleXMLElement $node, ?string $currentModule, string $file): void
     {
         if (isset($node['module'])) {
             $currentModule = (string) $node['module'];
         }
 
         if ($currentModule !== null && isset($node['translate'])) {
-            $translateChildren = preg_split('/[\s,]+/', (string) $node['translate'], -1, PREG_SPLIT_NO_EMPTY);
+            $translateChildren = preg_split('/[\s,]+/', (string)$node['translate'], -1, PREG_SPLIT_NO_EMPTY);
             foreach ($node->children() as $child) {
                 if (in_array($child->getName(), $translateChildren)) {
                     $str = (string) $child;
                     if ($str !== '') {
-                        $this->_entries[$currentModule][] = $str;
+                        $this->_entries[$currentModule][] = ['translation' => $str, 'file' => $file];
                     }
                 }
             }
         }
 
         foreach ($node->children() as $child) {
-            $this->_traverseXmlNode($child, $currentModule);
+            $this->_traverseXmlNode($child, $currentModule, $file);
         }
     }
 
@@ -162,8 +169,8 @@ class Mage_Cms_Model_Translate
                     $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
                     $scope  = $match[1][0];
                     $string = $match[2][0];
-                    if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
-                        $this->_entries[$scope][] = $string;
+                    if (!in_array($string, array_column($this->_entries[$scope] ?? [], 'translation'), true)) {
+                        $this->_entries[$scope][] = ['translation' => $string, 'file' => $phpFile];
                     }
                 }
             }
@@ -175,8 +182,8 @@ class Mage_Cms_Model_Translate
                     $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
                     $scope  = $match[1][0];
                     $string = $match[2][0];
-                    if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
-                        $this->_entries[$scope][] = $string;
+                    if (!in_array($string, array_column($this->_entries[$scope] ?? [], 'translation'), true)) {
+                        $this->_entries[$scope][] = ['translation' => $string, 'file' => $phpFile];
                     }
                 }
             }
@@ -188,8 +195,8 @@ class Mage_Cms_Model_Translate
                     $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
                     $scope  = $match[1][0];
                     $string = $match[2][0];
-                    if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
-                        $this->_entries[$scope][] = $string;
+                    if (!in_array($string, array_column($this->_entries[$scope] ?? [], 'translation'), true)) {
+                        $this->_entries[$scope][] = ['translation' => $string, 'file' => $phpFile];
                     }
                 }
             }
@@ -223,8 +230,8 @@ class Mage_Cms_Model_Translate
                 foreach ($thisMatches as $match) {
                     $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
                     $string = $match[1][0];
-                    if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
-                        $this->_entries[$scope][] = $string;
+                    if (!in_array($string, array_column($this->_entries[$scope] ?? [], 'translation'), true)) {
+                        $this->_entries[$scope][] = ['translation' => $string, 'file' => $phpFile];
                     }
                 }
             }
@@ -239,8 +246,8 @@ class Mage_Cms_Model_Translate
                         foreach ($varMatches as $match) {
                             $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
                             $string = $match[1][0];
-                            if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
-                                $this->_entries[$scope][] = $string;
+                            if (!in_array($string, array_column($this->_entries[$scope] ?? [], 'translation'), true)) {
+                                $this->_entries[$scope][] = ['translation' => $string, 'file' => $phpFile];
                             }
                         }
                     }
@@ -257,7 +264,7 @@ class Mage_Cms_Model_Translate
                             continue 2;
                         }
                     }
-                    $this->_others[] = ['translation' => trim($match[0][0]), 'type' => 'unidentified'];
+                    $this->_others[] = ['translation' => trim($match[0][0]), 'type' => 'unidentified', 'file' => $phpFile];
                 }
             }
             // DEBUG END
@@ -288,8 +295,24 @@ class Mage_Cms_Model_Translate
             foreach ($matches as $match) {
                 $scope  = $match[1];
                 $string = $match[2];
-                if (!isset($this->_entries[$scope]) || !in_array($string, $this->_entries[$scope], true)) {
-                    $this->_entries[$scope][] = $string;
+                if (!in_array($string, array_column($this->_entries[$scope] ?? [], 'translation'), true)) {
+                    $this->_entries[$scope][] = ['translation' => $string, 'file' => $phtmlFile];
+                }
+            }
+
+            // Gather $this annotations
+            if (preg_match('/@var\s+\\\\?(\w+(?:_\w+)*)\s+\$this/', $contents, $varAnnotation)) {
+                $parts = explode('_', $varAnnotation[1]);
+                if (isset($parts[1])) {
+                    $scope = strtolower($parts[1]);
+                    if (preg_match_all("/\\\$this->__\(\s*['\"]([^'\"]+)['\"]/", $contents, $thisMatches, PREG_SET_ORDER)) {
+                        foreach ($thisMatches as $match) {
+                            $string = $match[1];
+                            if (!in_array($string, array_column($this->_entries[$scope] ?? [], 'translation'), true)) {
+                                $this->_entries[$scope][] = ['translation' => $string, 'file' => $phtmlFile];
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -299,11 +322,11 @@ class Mage_Cms_Model_Translate
     {
         $diff = [];
 
-        foreach ($this->_entries as $scope => $strings) {
+        foreach ($this->_entries as $scope => $entries) {
             $translations = $this->_config[$scope]['translations'] ?? [];
-            foreach ($strings as $string) {
-                if (!in_array($string, $translations, true)) {
-                    $diff[$scope][] = ['translation' => $string, 'type' => 'missing'];
+            foreach ($entries as $entry) {
+                if (!in_array($entry['translation'], $translations, true)) {
+                    $diff[$scope][] = ['translation' => $entry['translation'], 'file' => $entry['file'], 'type' => 'missing'];
                 }
             }
         }
@@ -311,31 +334,33 @@ class Mage_Cms_Model_Translate
         foreach ($this->_config as $scope => $config) {
             $entries = $this->_entries[$scope] ?? [];
             foreach ($config['translations'] as $translation) {
-                if (!in_array($translation, $entries, true)) {
-                    $diff[$scope][] = ['translation' => $translation, 'type' => 'obsolete'];
+                if (!in_array($translation, array_column($entries, 'translation'), true)) {
+                    $diff[$scope][] = ['translation' => $translation, 'file' => '', 'type' => 'obsolete'];
                 }
             }
         }
 
-        $diff['_unidentified'] = $this->_others;
+        $diff['_unidentified'] = $this->_others ?? [];
 
         $result = '';
         foreach ($diff as $scope => $items) {
             $typeWidth        = strlen('type');
             $translationWidth = strlen('translation');
+            $fileWidth        = strlen('file');
             foreach ($items as $item) {
                 $typeWidth        = max($typeWidth, strlen($item['type']));
                 $translationWidth = max($translationWidth, strlen($item['translation']));
+                $fileWidth        = max($fileWidth, strlen($item['file'] ?? ''));
             }
 
-            $separator = '+' . str_repeat('-', $typeWidth + 2) . '+' . str_repeat('-', $translationWidth + 2) . '+';
+            $separator = '+' . str_repeat('-', $typeWidth + 2) . '+' . str_repeat('-', $translationWidth + 2) . '+' . str_repeat('-', $fileWidth + 2) . '+';
 
             $result .= $scope . "\n";
             $result .= $separator . "\n";
-            $result .= '| ' . str_pad('type', $typeWidth) . ' | ' . str_pad('translation', $translationWidth) . " |\n";
+            $result .= '| ' . str_pad('type', $typeWidth) . ' | ' . str_pad('translation', $translationWidth) . ' | ' . str_pad('file', $fileWidth) . " |\n";
             $result .= $separator . "\n";
             foreach ($items as $item) {
-                $result .= '| ' . str_pad($item['type'], $typeWidth) . ' | ' . str_pad($item['translation'], $translationWidth) . " |\n";
+                $result .= '| ' . str_pad($item['type'], $typeWidth) . ' | ' . str_pad($item['translation'], $translationWidth) . ' | ' . str_pad($item['file'] ?? '', $fileWidth) . " |\n";
             }
             $result .= $separator . "\n\n";
         }
