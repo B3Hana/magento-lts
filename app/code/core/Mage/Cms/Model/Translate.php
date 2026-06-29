@@ -52,6 +52,7 @@ class Mage_Cms_Model_Translate
             }
 
             $files = [];
+            $layoutFiles = ['frontend' => [], 'adminhtml' => []];
             foreach (['global', 'frontend', 'adminhtml'] as $area) {
                 $filesNodes = $xml->xpath("{$area}/translate/modules/{$moduleName}/files");
                 if ($filesNodes) {
@@ -62,8 +63,26 @@ class Mage_Cms_Model_Translate
                         }
                     }
                 }
+
+                $layoutNodes = $xml->xpath("{$area}/layout/updates");
+                if ($layoutNodes) {
+                    foreach ($layoutNodes[0]->children() as $scope => $scopeNode) {
+                        $fileNode = $scopeNode->file ?? null;
+                        if ($fileNode !== null) {
+                            $layoutFileName = (string) $fileNode;
+                            if ($layoutFileName !== '') {
+                                $areas = $area === 'global' ? ['frontend', 'adminhtml'] : [$area];
+                                foreach ($areas as $targetArea) {
+                                    $layoutFiles[$targetArea][] = $layoutFileName;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             $files = array_values(array_unique($files));
+            $layoutFiles['frontend']  = array_values(array_unique($layoutFiles['frontend']));
+            $layoutFiles['adminhtml'] = array_values(array_unique($layoutFiles['adminhtml']));
 
             $localeBase = BP . DS . 'app' . DS . 'locale' . DS . $this->_lang . DS;
             $parser = new Varien_File_Csv();
@@ -82,6 +101,7 @@ class Mage_Cms_Model_Translate
                     'module'       => $moduleName,
                     'module_dir'   => $moduleDir,
                     'files'        => $files,
+                    'layoutFiles'  => $layoutFiles,
                     'translations' => $translations,
                 ];
             }
@@ -91,7 +111,7 @@ class Mage_Cms_Model_Translate
     protected function _gatherXmlUsages()
     {
         $this->_entries = [];
-        foreach ($this->_config as $config) {
+        foreach ($this->_config as $scope => $config) {
             $xmlFiles = glob($config['module_dir'] . DS . 'etc' . DS . '*.xml') ?: [];
 
             foreach ($xmlFiles as $xmlFile) {
@@ -107,6 +127,36 @@ class Mage_Cms_Model_Translate
                 }
 
                 $this->_traverseXmlNode($xml, null, $xmlFile);
+            }
+
+            foreach (['frontend', 'adminhtml'] as $area) {
+                foreach ($config['layoutFiles'][$area] as $layoutFileName) {
+                    $designBase = BP . DS . rtrim(self::PATH_DESIGN, DS) . DS . $area . DS;
+                    if (!is_dir($designBase)) {
+                        continue;
+                    }
+                    $iterator = new RecursiveIteratorIterator(
+                        new RecursiveDirectoryIterator($designBase, RecursiveDirectoryIterator::SKIP_DOTS)
+                    );
+                    foreach ($iterator as $fileInfo) {
+                        if (!$fileInfo->isFile()
+                            || $fileInfo->getFilename() !== $layoutFileName
+                            || basename(dirname($fileInfo->getPathname())) !== 'layout'
+                        ) {
+                            continue;
+                        }
+                        $layoutContents = file_get_contents($fileInfo->getPathname());
+                        if ($layoutContents === false) {
+                            continue;
+                        }
+                        try {
+                            $layoutXml = new SimpleXMLElement($layoutContents);
+                        } catch (Exception $e) {
+                            continue;
+                        }
+                        $this->_traverseXmlNode($layoutXml, $scope, $fileInfo->getPathname());
+                    }
+                }
             }
         }
 
