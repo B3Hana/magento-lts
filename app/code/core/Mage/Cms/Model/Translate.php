@@ -163,7 +163,7 @@ class Mage_Cms_Model_Translate
             $covered = [];
 
             // Gather direct Mage::helper calls.
-            $pattern = "/Mage::helper\(\s*['\"]([^'\"]+)['\"]\s*\)\s*->__\(\s*['\"]([^'\"]+)['\"]/s";
+            $pattern = "/Mage::helper\(\s*['\"]([^'\"]+)['\"]\s*\)\s*->__\(\s*(?|'([^']+)'|\"([^\"]+)\")/s";
             if (preg_match_all($pattern, $contents, $matches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
                 foreach ($matches as $match) {
                     $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
@@ -176,7 +176,7 @@ class Mage_Cms_Model_Translate
             }
 
             // Gather $this->helper calls.
-            $pattern = "/\\\$this->helper\(\s*['\"]([^'\"]+)['\"]\s*\)\s*->__\(\s*['\"]([^'\"]+)['\"]/s";
+            $pattern = "/\\\$this->helper\(\s*['\"]([^'\"]+)['\"]\s*\)\s*->__\(\s*(?|'([^']+)'|\"([^\"]+)\")/s";
             if (preg_match_all($pattern, $contents, $matches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
                 foreach ($matches as $match) {
                     $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
@@ -189,7 +189,7 @@ class Mage_Cms_Model_Translate
             }
 
             // Gather $this->_getHelper calls.
-            $pattern = "/\\\$this->_getHelper\(\s*['\"]([^'\"]+)['\"]\s*\)\s*->__\(\s*['\"]([^'\"]+)['\"]/s";
+            $pattern = "/\\\$this->_getHelper\(\s*['\"]([^'\"]+)['\"]\s*\)\s*->__\(\s*(?|'([^']+)'|\"([^\"]+)\")/s";
             if (preg_match_all($pattern, $contents, $matches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
                 foreach ($matches as $match) {
                     $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
@@ -203,7 +203,17 @@ class Mage_Cms_Model_Translate
 
             $scope = null;
             if (preg_match("/\\\$this->setUsedModuleName\(\s*['\"]([^'\"]+)['\"]\s*\)/", $contents, $moduleMatch)) {
-                $scope = $moduleMatch[1];
+                if (array_key_exists($moduleMatch[1], $this->_config)) {
+                    $scope = $moduleMatch[1];
+                } else {
+                    $scope = 'undefined';
+                    foreach ($this->_config as $configScope => $config) {
+                        if (($config['module'] ?? null) === $moduleMatch[1]) {
+                            $scope = $configScope;
+                            break;
+                        }
+                    }
+                }
             }
 
             if ($scope === null) {
@@ -226,7 +236,7 @@ class Mage_Cms_Model_Translate
             }
 
             // Gather $this calls
-            if (preg_match_all("/\\\$this->__\(\s*['\"]([^'\"]+)['\"]/", $contents, $thisMatches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
+            if (preg_match_all("/\\\$this->__\(\s*(?|'([^']+)'|\"([^\"]+)\")/", $contents, $thisMatches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
                 foreach ($thisMatches as $match) {
                     $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
                     $string = $match[1][0];
@@ -241,7 +251,7 @@ class Mage_Cms_Model_Translate
                 foreach ($assignments as $assignment) {
                     $varName = $assignment[1][0];
                     $scope   = $assignment[2][0];
-                    $varPattern = "/\\\$" . preg_quote($varName, '/') . "\s*->__\(\s*['\"]([^'\"]+)['\"]/";
+                    $varPattern = "/\\\$" . preg_quote($varName, '/') . "\s*->__\(\s*(?|'([^']+)'|\"([^\"]+)\")/";
                     if (preg_match_all($varPattern, $contents, $varMatches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
                         foreach ($varMatches as $match) {
                             $covered[] = [$match[0][1], $match[0][1] + strlen($match[0][0])];
@@ -255,7 +265,7 @@ class Mage_Cms_Model_Translate
             }
 
             // DEBUG START
-            if (preg_match_all("/([^\n;]+)\s*->__\(\s*['\"]([^'\"]+)['\"]/", $contents, $otherMatches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
+            if (preg_match_all("/([^\n;]+)\s*->__\(\s*(?|'([^']+)'|\"([^\"]+)\")/", $contents, $otherMatches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
                 foreach ($otherMatches as $match) {
                     $start = $match[0][1];
                     $end   = $start + strlen($match[0][0]);
@@ -287,7 +297,7 @@ class Mage_Cms_Model_Translate
                 continue;
             }
 
-            $pattern = "/Mage::helper\(\s*['\"]([^'\"]+)['\"]\s*\)\s*->__\(\s*['\"]([^'\"]+)['\"]/s";
+            $pattern = "/Mage::helper\(\s*['\"]([^'\"]+)['\"]\s*\)\s*->__\(\s*(?|'([^']+)'|\"([^\"]+)\")/s";
             if (!preg_match_all($pattern, $contents, $matches, PREG_SET_ORDER)) {
                 continue;
             }
@@ -305,7 +315,7 @@ class Mage_Cms_Model_Translate
                 $parts = explode('_', $varAnnotation[1]);
                 if (isset($parts[1])) {
                     $scope = strtolower($parts[1]);
-                    if (preg_match_all("/\\\$this->__\(\s*['\"]([^'\"]+)['\"]/", $contents, $thisMatches, PREG_SET_ORDER)) {
+                    if (preg_match_all("/\\\$this->__\(\s*(?|'([^']+)'|\"([^\"]+)\")/", $contents, $thisMatches, PREG_SET_ORDER)) {
                         foreach ($thisMatches as $match) {
                             $string = $match[1];
                             if (!in_array($string, array_column($this->_entries[$scope] ?? [], 'translation'), true)) {
