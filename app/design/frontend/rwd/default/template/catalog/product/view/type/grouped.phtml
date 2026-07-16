@@ -21,9 +21,11 @@
 <?php echo $this->getChildHtml('product_type_data_extra') ?>
 <div class="grouped-items-table-wrapper">
     <table class="data-table grouped-items-table" id="super-product-table">
-        <col />
-        <col />
-        <col />
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
         <tbody>
         <?php if ($_hasAssociatedProducts): ?>
         <?php foreach ($_associatedProducts as $_item): ?>

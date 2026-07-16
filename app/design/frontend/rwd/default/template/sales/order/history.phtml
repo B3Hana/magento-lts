@@ -21,12 +21,14 @@
 <?php echo $this->getPagerHtml(); ?>
 <?php if($_orders->getSize()): ?>
 <table class="data-table orders" id="my-orders-table">
-    <col width="1" />
-    <col width="1" />
-    <col />
-    <col width="1" />
-    <col width="1" />
-    <col width="1" />
+    <colgroup>
+        <col style="width: 1px;">
+        <col style="width: 1px;">
+        <col>
+        <col style="width: 1px;">
+        <col style="width: 1px;">
+        <col style="width: 1px;">
+    </colgroup>
     <thead>
         <tr>
             <th class="number"><?php echo $this->__('Order #') ?></th>

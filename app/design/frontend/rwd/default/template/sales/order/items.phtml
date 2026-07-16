@@ -13,11 +13,13 @@
 ?>
 <?php  $_order = $this->getOrder() ?>
 <table class="data-table linearize-table-large" id="my-orders-table" summary="<?php echo $this->__('Items Ordered') ?>">
-    <col />
-    <col width="1" />
-    <col width="1" />
-    <col width="1" />
-    <col width="1" />
+    <colgroup>
+        <col>
+        <col style="width: 1px;">
+        <col style="width: 1px;">
+        <col style="width: 1px;">
+        <col style="width: 1px;">
+    </colgroup>
     <thead>
         <tr>
             <th><?php echo $this->__('Product') ?></th>

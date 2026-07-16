@@ -51,12 +51,14 @@
         <?php echo $this->getChildHtml('pager'); ?>
         <h2 class="table-caption"><?php echo $this->__('Related Orders') ?></h2>
         <table class="data-table" id="related-orders-table">
-            <col width="1" />
-            <col width="1" />
-            <col />
-            <col width="1" />
-            <col width="1" />
-            <col width="1" />
+            <colgroup>
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+                <col>
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+            </colgroup>
             <thead>
             <tr>
                 <th><span class="nobr"><?php echo $this->__('Order #') ?></span></th>

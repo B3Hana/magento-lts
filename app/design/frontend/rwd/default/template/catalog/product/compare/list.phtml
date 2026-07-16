@@ -17,12 +17,14 @@
 <?php if($_total): ?>
     <table class="data-table compare-table" id="product_comparison">
         <?php $_i=0 ?>
-        <?php foreach($this->getItems() as $_item): ?>
-            <?php if($_i++ % 10 === 0): ?>
-                <col width="1" />
-            <?php endif ?>
-            <col width="<?php echo floor(100/$_total); ?>%" />
-        <?php endforeach ?>
+        <colgroup>
+            <?php foreach($this->getItems() as $_item): ?>
+                <?php if($_i++ % 10 === 0): ?>
+                    <col style="width: 1px;">
+                <?php endif ?>
+                <col style="width: <?php echo floor(100/$_total); ?>%;">
+            <?php endforeach ?>
+        </colgroup>
         <?php if ($_total>2): ?>
             <thead>
             <tr>

@@ -32,16 +32,18 @@
     <form action="<?php echo $this->getFormActionUrl() ?>" method="post">
         <?php echo $this->getBlockHtml('formkey'); ?>
         <table id="shopping-cart-table" class="cart-table data-table">
-            <col width="1" />
-            <col width="1" />
-            <col width="1" />
-            <col width="1" />
-            <col width="1" />
-            <col width="1" />
-            <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
-            <col width="1" />
-            <col width="1" />
-            <?php endif ?>
+            <colgroup>
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+                <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+                    <col style="width: 1px;">
+                    <col style="width: 1px;">
+                <?php endif ?>
+            </colgroup>
 
         <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
             <thead>

@@ -18,12 +18,14 @@
     <?php if (count($billingAgreements) > 0): ?>
         <?php echo $this->getChildHtml('pager'); ?>
         <table id="billing-agreements" class="data-table linearize-table">
-            <col />
-            <col width="1" />
-            <col />
-            <col />
-            <col />
-            <col width="1" />
+            <colgroup>
+                <col>
+                <col style="width: 1px;"/>
+                <col>
+                <col>
+                <col>
+                <col style="width: 1px;"/>
+            </colgroup>
             <thead>
             <tr>
                 <th class="reference-id"><span class="nobr"><?php echo $this->__('Reference ID'); ?></span></th>

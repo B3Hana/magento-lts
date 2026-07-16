@@ -25,10 +25,12 @@
         <input type="hidden" name="new_address" value="0" id="add_new_address_flag" />
         <h2><?php echo $this->__('Please select shipping address for applicable items') ?></h2>
         <table class="data-table linearize-table" id="multiship-addresses-table">
-            <col />
-            <col width="1" />
-            <col width="1" />
-            <col width="1" />
+            <colgroup>
+                <col>
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+            </colgroup>
             <thead>
             <tr>
                 <th><?php echo $this->__('Product') ?></th>

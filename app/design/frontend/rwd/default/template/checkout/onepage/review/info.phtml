@@ -19,14 +19,16 @@
     $colspan = 1;
     $rowspan = 1;
 } ?>
-        <col />
-        <col width="1" />
-        <col width="1" />
-        <col width="1" />
-        <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
-        <col width="1" />
-        <col width="1" />
-        <?php endif ?>
+        <colgroup>
+            <col>
+            <col style="width: 1px;">
+            <col style="width: 1px;">
+            <col style="width: 1px;">
+            <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+                <col style="width: 1px;">
+                <col style="width: 1px;">
+            <?php endif ?>
+        </colgroup>
         <thead>
             <tr>
                 <th rowspan="<?php echo $rowspan ?>"><?php echo $this->__('Product') ?></th>

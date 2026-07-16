@@ -16,8 +16,10 @@
         <a href="#" id="<?php echo $this->getPlaceholderId() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Only %s left', ($this->getStockQty()))) ?>"><?php echo $this->__('Only %s left', "<strong>{$this->getStockQty()}</strong>") ?></a>
     </p>
     <table id="<?php echo $this->getDetailsPlaceholderId() ?>" class="availability-only-details no-display data-table">
-        <col />
-        <col width="1" />
+        <colgroup>
+            <col>
+            <col style="width: 1px;">
+        </colgroup>
         <thead>
             <tr>
                 <th><?php echo $this->__('Product Name') ?></th>

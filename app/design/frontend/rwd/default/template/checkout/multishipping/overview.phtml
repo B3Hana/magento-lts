@@ -81,16 +81,18 @@
                     <h4><?php echo $this->__('Items') ?> <span class="separator">|</span> <a href="<?php echo $this->getAddressesEditUrl() ?>"><?php echo $this->__('Edit Items') ?></a></h4>
                     <?php $_tableClass = $this->helper('tax')->displayCartBothPrices() ? 'linearize-table-large' : 'linearize-table'; ?>
                     <table class="data-table <?php echo $_tableClass; ?> checkout-review-table" id="overview-table-<?php echo $_address->getId() ?>">
-                        <col />
-                        <col width="1" />
-                        <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
-                        <col width="1" />
-                        <?php endif ?>
-                        <col width="1" />
-                        <col width="1" />
-                        <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
-                        <col width="1" />
-                        <?php endif ?>
+                        <colgroup>
+                            <col>
+                            <col style="width: 1px;">
+                            <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+                                <col style="width: 1px;">
+                            <?php endif ?>
+                            <col style="width: 1px;">
+                            <col style="width: 1px;">
+                            <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+                                <col style="width: 1px;">
+                            <?php endif ?>
+                        </colgroup>
                         <thead>
                             <tr>
                                 <th rowspan="<?php echo $mergedCells; ?>"><?php echo $this->__('Product Name') ?></th>
@@ -132,16 +134,18 @@
                 <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
                 <?php $_tableClass = $this->helper('tax')->displayCartBothPrices() ? 'linearize-table-large' : 'linearize-table'; ?>
                 <table class="data-table <?php echo $_tableClass; ?> checkout-review-table" id="virtual-overview-table">
-                    <col />
-                    <col width="1" />
-                    <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
-                    <col width="1" />
-                    <?php endif ?>
-                    <col width="1" />
-                    <col width="1" />
-                    <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
-                    <col width="70" />
-                    <?php endif ?>
+                    <colgroup>
+                        <col>
+                        <col style="width: 1px;">
+                        <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+                            <col style="width: 1px;">
+                        <?php endif ?>
+                        <col style="width: 1px;">
+                        <col style="width: 1px;">
+                        <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+                            <col style="width: 1px;">
+                        <?php endif ?>
+                    </colgroup>
                     <thead>
                         <tr>
                             <th rowspan="<?php echo $mergedCells; ?>"><?php echo $this->__('Product Name') ?></th>
