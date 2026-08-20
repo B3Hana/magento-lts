@@ -135,12 +135,12 @@ button,
   &.save,
   &.add,
   &.ok_button {
-    background: $openmage_blue;
+    background: $openmage_blue_dark;
 
     &:hover,
     &:focus,
     &:active {
-      background: $openmage_blue_dark;
+      background: $openmage_base_blue_dark;
     }
   }
 
@@ -193,7 +193,7 @@ button,
   }
 
   &.scope-label {
-    color: $color_martini_approx;
+    color: $color_dark_grey;
     font-size: 11px;
   }
 

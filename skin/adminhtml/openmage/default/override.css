@@ -77,7 +77,7 @@ dl.accordion dt a:after, div.collapseable a:after {
   height: 0;
   border-style: solid;
   border-width: 8px 6px 0 6px;
-  border-color: #71798e transparent transparent transparent;
+  border-color: #50586d transparent transparent transparent;
 }
 
 dl.accordion dt.open a:after, div.collapseable a.open:after {
@@ -90,7 +90,7 @@ dl.accordion dt.open a:after, div.collapseable a.open:after {
   height: 0;
   border-style: solid;
   border-width: 0 6px 8px 6px;
-  border-color: transparent transparent #71798e transparent;
+  border-color: transparent transparent #50586d transparent;
 }
 
 .warning-msg, .success-msg, .error-msg, .notice-msg {
@@ -376,8 +376,8 @@ small {
   margin-top: 5px;
 }
 .grid tr.headings {
-  background: #71798e;
-  border: 1px solid #71798e;
+  background: #50586d;
+  border: 1px solid #50586d;
 }
 .grid tr.headings th {
   padding: 4px;
@@ -526,8 +526,12 @@ ul.tabs-horiz li a {
 }
 ul.tabs-horiz li a.active {
   border: 0;
-  background: #71798e;
+  background: #50586d;
   color: #fff !important;
+}
+ul.tabs-horiz li a.active:focus-visible {
+  outline-offset: -4px;
+  outline-color: white;
 }
 ul.tabs {
   background: none;
@@ -546,7 +550,7 @@ ul.tabs a {
   border-bottom: 1px solid #eee;
 }
 ul.tabs a.active {
-  border-left: 3px solid #71798e;
+  border-left: 3px solid #50586d;
   padding: 8px 18px;
   border-bottom: 1px solid #eee;
 }
@@ -576,7 +580,7 @@ ul.config-tabs dt {
   text-transform: none;
   padding: 7px 7px 7px 10px;
   font-size: 18px;
-  background: #71798e;
+  background: #50586d;
   color: #fff;
 }
 

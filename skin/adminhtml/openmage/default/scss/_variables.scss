@@ -21,7 +21,11 @@ $openmage_red_dark: #963535;
 $openmage_blue_light: #f0f9ff;
 $openmage_blue: #0090FF;
 $openmage_blue_dark: #025988;
-$openmage_blue_gray: #71798e;
+
+// change to darker because of contrast. now 7.09 AAA
+// default buttons, grid header, active tabs(dashboard),
+// tabs header and active side-border(sidebar) (only config for now)
+$openmage_blue_gray: #50586d;
 
 $color_wild_sand_approx: #f6f6f6;
 $color_white_approx: #fefefe;

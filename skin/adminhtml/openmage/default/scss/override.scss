@@ -513,6 +513,11 @@ ul {
           border: 0;
           background: $openmage_blue_gray;
           color: $white !important;
+
+          &:focus-visible {
+            outline-offset: -4px;
+            outline-color: white;
+          }
         }
       }
     }

@@ -86,7 +86,7 @@ select[size] {
 button,
 .form-button {
   text-transform: none;
-  background: #71798e;
+  background: #50586d;
   padding: 0 12px;
   color: #fff;
   border: none;
@@ -139,7 +139,7 @@ button.save, button.add, button.ok_button,
 .form-button.save,
 .form-button.add,
 .form-button.ok_button {
-  background: #0090FF;
+  background: #025988;
 }
 button.save:hover, button.save:focus, button.save:active, button.add:hover, button.add:focus, button.add:active, button.ok_button:hover, button.ok_button:focus, button.ok_button:active,
 .form-button.save:hover,
@@ -151,7 +151,7 @@ button.save:hover, button.save:focus, button.save:active, button.add:hover, butt
 .form-button.ok_button:hover,
 .form-button.ok_button:focus,
 .form-button.ok_button:active {
-  background: #025988;
+  background: #273169;
 }
 button.cancel, button.cancel_button, button.delete, button.fail,
 .form-button.cancel,
@@ -195,7 +195,7 @@ button.success:hover, button.success:focus, button.success:active,
   padding: 0 10px 0 0;
 }
 .form-list td.scope-label {
-  color: #999;
+  color: #2f2f2f;
   font-size: 11px;
 }
 .form-list td.value input.input-text, .form-list td.value textarea, .form-list td.value select {
