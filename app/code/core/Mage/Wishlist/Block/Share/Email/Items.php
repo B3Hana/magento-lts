@@ -61,7 +61,7 @@ class Mage_Wishlist_Block_Share_Email_Items extends Mage_Wishlist_Block_Abstract
     {
         $hasDescription = parent::hasDescription($item);
         if ($hasDescription) {
-            return ($item->getDescription() !== Mage::helper('wishlist')->defaultCommentString());
+            return $item->getDescription() !== Mage::helper('wishlist')->defaultCommentString();
         }
 
         return $hasDescription;
