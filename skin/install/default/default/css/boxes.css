@@ -19,13 +19,11 @@
 /* Col2 */
 .col2-set .col-1, .col2-set .col-2 { width:48.5%; }
 .col2-set .col-1 { float:left; }
-.col2-set .col-2 { float:right;}
+.col2-set .col-2 { float:right; }
 
 /* Col2-alt */
-.col2-alt-set .col-1 { width:32%; }
-.col2-alt-set .col-2 { width:65%; }
-.col2-alt-set .col-1 { float:left; }
-.col2-alt-set .col-2 { float:right;}
+.col2-alt-set .col-1 { width:32%; float:left; }
+.col2-alt-set .col-2 { width:65%; float:right; }
 
 /* Col3 */
 .col3-set .col-1, .col3-set .col-2, .col3-set .col-3 { float:left; width:31.3%; }

@@ -30,20 +30,19 @@ h6 { font-size:.95em; }
 
 /* Table */
 th { padding:0; text-align:left; vertical-align:top; }
-td {padding:0;vertical-align:top;}
+td { padding:0; vertical-align:top; }
 
 /* Paragraph */
 p { margin-bottom:.8em; }
-address { margin-bottom:.4em; }
-address { font-style:normal; line-height:1.4em;}
-cite { font-style:normal; font-size:10px;}
-q:before, q:after{content:'';}
+address { margin-bottom:.4em; font-style:normal; line-height:1.4em; }
+cite { font-style:normal; font-size:10px; }
+q:before, q:after{ content:''; }
 
 /* Form */
 form { display:inline;}
 fieldset { border:none; }
 legend { display:none; display:block !important; height:0; line-height:0; margin:0; overflow:hidden; padding:0; width:0; visibility:hidden; }
-label { color:#666; /*font-size:.95em;*/  font-weight:bold; }
+label { color:#666; font-weight:bold; }
 input, select, button { vertical-align:middle; }
 
 /* Lists */
