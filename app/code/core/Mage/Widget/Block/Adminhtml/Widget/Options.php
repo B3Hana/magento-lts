@@ -125,7 +125,7 @@ class Mage_Widget_Block_Adminhtml_Widget_Options extends Mage_Adminhtml_Block_Wi
     protected function _addField($parameter)
     {
         $form = $this->getForm();
-        $fieldset = $this->getMainFieldset(); //$form->getElement('options_fieldset');
+        $fieldset = $this->getMainFieldset();
 
         // prepare element data with values (either from request of from default values)
         $fieldName = $parameter->getKey();
