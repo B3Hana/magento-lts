@@ -15,7 +15,7 @@
 #nav li:hover { z-index:999; }
 #nav a,
 #nav a:hover { display:block; text-decoration:none; }
-#nav span { display:block; /*cursor:pointer;*/ }
+#nav span { display:block; }
 #nav a { line-height:1.3em; }
 
 

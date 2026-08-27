@@ -30,7 +30,7 @@ fieldset      { border:0; }
 legend        { display:none; }
 
 /* Table */
-table         { border:0; /*border-collapse:collapse;*/ border-spacing:0; empty-cells:show; font-size:100%; }
+table         { border:0; border-spacing:0; empty-cells:show; font-size:100%; }
 caption,th,td { vertical-align:top; text-align:left; font-weight:normal; }
 
 /* Content */
@@ -43,7 +43,6 @@ blockquote    { quotes:none; }
 q:before,
 q:after       { content:''; }
 small,big     { font-size:1em; }
-/*sup           { font-size:1em; vertical-align:top; }*/
 
 /* Lists */
 ul,ol         { list-style:none; }
