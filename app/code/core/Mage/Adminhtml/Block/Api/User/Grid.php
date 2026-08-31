@@ -8,7 +8,7 @@
  */
 
 /**
- * Adminhtml permissions user grid
+ * Adminhtml api user grid
  *
  * @package    Mage_Adminhtml
  */
@@ -19,7 +19,7 @@ class Mage_Adminhtml_Block_Api_User_Grid extends Mage_Adminhtml_Block_Widget_Gri
     public function __construct()
     {
         parent::__construct();
-        $this->setId('permissionsUserGrid');
+        $this->setId('apiUserGrid');
         $this->setDefaultSort('username');
         $this->setDefaultDir('ASC');
         $this->setUseAjax(true);
