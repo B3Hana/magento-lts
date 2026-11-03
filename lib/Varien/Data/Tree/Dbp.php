@@ -130,7 +130,7 @@ class Varien_Data_Tree_Dbp extends Varien_Data_Tree
      *
      * @param  int|Varien_Data_Tree_Node $parentNode
      * @param  int                       $recursionLevel
-     * @return Varien_Data_Tree_Dbp
+     * @return $this
      */
     public function load($parentNode = null, $recursionLevel = 0)
     {
