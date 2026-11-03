@@ -3917,11 +3917,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Customer/Model/Resource/Customer.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Parameter #1 $entity of method Mage_Eav_Model_Entity_Collection_Abstract<Mage_Core_Model_Abstract>::setEntity() expects Mage_Eav_Model_Entity_Abstract, object given.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Customer/Model/Resource/Wishlist/Collection.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Parameter #1 $customerId of method Mage_Customer_AccountController::_validateResetPasswordLinkToken() expects int, int|string given.',
     'count' => 2,
     'path' => __DIR__ . '/../app/code/core/Mage/Customer/controllers/AccountController.php',

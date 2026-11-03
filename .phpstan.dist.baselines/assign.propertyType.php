@@ -168,7 +168,7 @@ $ignoreErrors[] = [
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Property Mage_CatalogSearch_Helper_Data::$_engine (Mage_CatalogSearch_Model_Resource_Fulltext_Engine) does not accept object.',
-    'count' => 2,
+    'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/CatalogSearch/Helper/Data.php',
 ];
 $ignoreErrors[] = [
@@ -475,11 +475,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Property Mage_Reports_Model_Resource_Coupons_Collection::$_to (string) does not accept string|null.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Resource/Coupons/Collection.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Property Mage_Reports_Model_Resource_Product_Lowstock_Collection::$_inventoryItemResource (Mage_CatalogInventory_Model_Resource_Stock_Item) does not accept object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Resource/Product/Lowstock/Collection.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Property DOMNode::$nodeValue (string|null) does not accept int<min, -1>|int<1, max>.',

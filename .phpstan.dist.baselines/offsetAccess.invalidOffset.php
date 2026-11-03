@@ -328,7 +328,7 @@ $ignoreErrors[] = [
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Possibly invalid array key type int|string|null.',
-    'count' => 1,
+    'count' => 3,
     'path' => __DIR__ . '/../app/code/core/Mage/Checkout/Block/Cart.php',
 ];
 $ignoreErrors[] = [

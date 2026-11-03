@@ -817,19 +817,9 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Api/V2.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_Catalog_Model_Product_Attribute_Backend_Groupprice::_getResource() should return Mage_Catalog_Model_Resource_Product_Attribute_Backend_Groupprice but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Attribute/Backend/Groupprice.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Catalog_Model_Product_Attribute_Backend_Sku::validate() should return bool but returns $this(Mage_Catalog_Model_Product_Attribute_Backend_Sku)|bool.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Attribute/Backend/Sku.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_Catalog_Model_Product_Attribute_Backend_Tierprice::_getResource() should return Mage_Catalog_Model_Resource_Product_Attribute_Backend_Tierprice but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Attribute/Backend/Tierprice.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Catalog_Model_Product_Option_Type_File::_isImage() should return bool but returns string|false.',
@@ -1002,11 +992,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product/Type/Configurable.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_Catalog_Model_Resource_Product_Website::_getProductResource() should return Mage_Catalog_Model_Resource_Product but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product/Website.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Catalog_ProductController::_initProduct() should return Mage_Catalog_Model_Product but returns Mage_Catalog_Model_Product|false.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/controllers/ProductController.php',
@@ -1087,11 +1072,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/CatalogSearch/Model/Advanced.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_CatalogSearch_Model_Indexer_Fulltext::_getResource() should return Mage_CatalogSearch_Model_Resource_Indexer_Fulltext but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/CatalogSearch/Model/Indexer/Fulltext.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Method Mage_CatalogSearch_Model_Query::getStoreId() should return int but returns int|null.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/CatalogSearch/Model/Query.php',
@@ -1170,11 +1150,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Checkout_Model_Api_Resource::_getStoreId() should return int but returns int|null.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Checkout/Model/Api/Resource.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_Checkout_Model_Cart::_getResource() should return Mage_Checkout_Model_Resource_Cart but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Checkout/Model/Cart.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Checkout_Model_Cart::getSummaryQty() should return float|int but returns int|null.',
@@ -1415,11 +1390,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Core_Model_App::useCache() should return array|false but returns array|bool.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Core/Model/App.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_Core_Model_Cache::_getResource() should return Mage_Core_Model_Resource_Cache but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Core/Model/Cache.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Core_Model_Cache::canUse() should return array|bool but returns array|null.',
@@ -1677,11 +1647,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Core/Model/Resource/Session.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_Core_Model_Resource_Setup::_getResource() should return Mage_Core_Model_Resource_Resource but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Core/Model/Resource/Setup.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Core_Model_Resource_Setup_Query_Modifier::_getColumnDefinitionFromSql() should return array but returns array<string, mixed>|null.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Core/Model/Resource/Setup/Query/Modifier.php',
@@ -1750,11 +1715,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Core_Model_Store_Group::getStores() should return array<Mage_Core_Model_Store> but returns array|null.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Core/Model/Store/Group.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_Core_Model_Translate::getResource() should return Mage_Core_Model_Resource_Translate but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Core/Model/Translate.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Core_Model_Url::_getSingletonModel() should return Mage_Core_Model_Abstract but returns object|false.',
@@ -2177,11 +2137,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/ImportExport/Model/Export/Adapter/Abstract.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_ImportExport_Model_Import::getDataSourceModel() should return Mage_ImportExport_Model_Resource_Import_Data but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/ImportExport/Model/Import.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Method Mage_ImportExport_Model_Import_Entity_Customer_Address::validateRow() should return bool but returns bool|int.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/ImportExport/Model/Import/Entity/Customer/Address.php',
@@ -2465,11 +2420,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Reports_Model_Product_Index_Abstract::getVisitorId() should return int but returns int|string|null.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Product/Index/Abstract.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_Reports_Model_Resource_Product_Lowstock_Collection::_getInventoryItemResource() should return Mage_CatalogInventory_Model_Resource_Stock_Item but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Resource/Product/Lowstock/Collection.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Reports_Model_Test::getUsersCities() should return string but returns string|false.',

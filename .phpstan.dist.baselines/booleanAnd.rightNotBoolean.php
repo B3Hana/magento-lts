@@ -1502,11 +1502,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Review/Model/Resource/Review.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Only booleans are allowed in &&, object given on the right side.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Review/Model/Resource/Review.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Only booleans are allowed in &&, mixed given on the right side.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Rss/Controller/Abstract.php',

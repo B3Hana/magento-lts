@@ -187,11 +187,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Bundle/Model/Product/Price.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::reset().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Bundle/Model/Product/Price.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Catalog_Model_Product_Type_Price|Mage_Core_Model_Abstract::getSelectionFinalTotalPrice().',
     'count' => 2,
     'path' => __DIR__ . '/../app/code/core/Mage/Bundle/Model/Product/Type.php',
@@ -322,11 +317,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Attribute/Backend/Media.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getCount().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Compare/List.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Catalog_Model_Resource_Product_Flat_Indexer::prepareFlatTables().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Flat/Indexer.php',
@@ -352,41 +342,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Status.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getFlatUpdateSelect().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Status.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getChildrenIds().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Type/Configurable.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getConfigurableOptions().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Type/Configurable.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getParentIdsByChild().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Type/Configurable.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getChildrenIds().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Type/Grouped.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getParentIdsByChild().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Type/Grouped.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getFlatUpdateSelect().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Product/Visibility.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Catalog_Model_Resource_Category_Collection::addSortedField().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Category/Flat.php',
@@ -395,16 +350,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Core_Model_Resource_Db_Abstract::getMainStoreTable().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Category/Flat/Collection.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getAttribute().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Category/Tree.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::move().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Category/Tree.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::getBackend().',
@@ -417,18 +362,8 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Collection/Abstract.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getAttributesByCode().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Eav/Attribute.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Catalog_Model_Resource_Category::refreshProductIndex().',
     'count' => 2,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::verifyIds().',
-    'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product.php',
 ];
 $ignoreErrors[] = [
@@ -462,44 +397,14 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product/Collection.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getRewriteByProductStore().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product/Collection.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Catalog_Model_Resource_Product_Flat|Mage_Eav_Model_Entity_Abstract::getEntityTable().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product/Compare/Item/Collection.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::clearItems().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product/Compare/Item/Collection.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::processRelations().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product/Link.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::refreshEnabledIndex().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product/Status.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::processRelations().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Resource/Product/Type/Configurable.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_CatalogIndex_Model_Resource_Attribute::checkCount().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/CatalogIndex/Model/Attribute.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::refreshEnabledIndex().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/CatalogIndex/Model/Indexer.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::cleanup().',
@@ -520,46 +425,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::saveIndices().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/CatalogIndex/Model/Indexer/Abstract.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::prepareCatalogProductIndexSelect().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/CatalogInventory/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::reindexProductIds().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/CatalogInventory/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::reindexProducts().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/CatalogInventory/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::updateLowStockDate().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/CatalogInventory/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::updateSetInStock().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/CatalogInventory/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::updateSetOutOfStock().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/CatalogInventory/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getRulePrices().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/CatalogRule/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::updateRuleProductData().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/CatalogRule/Model/Observer.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Rule_Model_Condition_Combine::collectValidatedAttributes().',
@@ -652,24 +517,9 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/CatalogSearch/Model/Resource/Fulltext.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getRewriteByProductStore().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Checkout/Block/Cart.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Sales_Model_Order::createFromQuoteAddress().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Checkout/Model/Type/Abstract.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getCmsPageTitleById().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Cms/Block/Widget/Page/Link.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::setStore().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Cms/Block/Widget/Page/Link.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::getMessages().',
@@ -795,11 +645,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Customer_Model_Api2_Customer_Address::_getDefaultAddressesInfo().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Customer/Model/Api2/Customer/Address.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::findEmailDuplicates().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Customer/Model/Config/Share.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::generatePassword().',
@@ -932,11 +777,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Customer/Model/Convert/Parser/Customer.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::checkCustomerId().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Customer/Model/Session.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Dataflow_Model_Convert_Action::getData().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Dataflow/Model/Convert.php',
@@ -1037,11 +877,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Eav/Model/Entity/Attribute/Abstract.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getValidAttributeIds().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Eav/Model/Entity/Attribute/Set.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Eav_Model_Entity_Collection_Abstract::getStoreId().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Eav/Model/Entity/Attribute/Source/Table.php',
@@ -1060,11 +895,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::setEntityTypeFilter().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Eav/Model/Entity/Type.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getAdditionalAttributeTable().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Eav/Model/Resource/Entity/Attribute.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Eav_Model_Entity_Collection_Abstract::getStoreId().',
@@ -1125,11 +955,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::watermark().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Media/Model/Image.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::addFieldToFilter().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Newsletter/Model/Resource/Queue.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::getCurPage().',
@@ -1207,11 +1032,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Paypal/Model/Standard.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::deleteAggregatedRatingsByProductId().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Rating/Model/Observer.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Adminhtml_Model_Report_Item|Mage_Core_Model_Abstract::addChild().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Grouped/Collection.php',
@@ -1232,26 +1052,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Resource/Event.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getEntityIdField().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Resource/Product/Collection.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getEntityTable().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Resource/Product/Collection.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getTypeId().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Resource/Product/Collection.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getAttribute().',
-    'count' => 6,
-    'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Resource/Quote/Collection.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Reports_Model_Resource_Review_Collection::_joinFields().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Reports/Model/Resource/Review/Collection.php',
@@ -1265,16 +1065,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::getId().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Review/Block/Form.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::deleteReviewsByProductId().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Review/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::aggregateEntityByRatingId().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Review/Model/Resource/Review.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::getWebsiteIds().',
@@ -1297,11 +1087,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Rule/Model/Action/Collection.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::loadAllAttributes().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Rule/Model/Condition/Product/Abstract.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method object::getItems().',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Sales/Model/Api2/Order.php',
@@ -1312,34 +1097,9 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Sales/Model/Api2/Order/Rest/Customer/V1.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getTypeId().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Sales/Model/Entity/Order/Collection.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Sales_Model_Resource_Quote_Collection::addAttributeToSelect().',
     'count' => 2,
     'path' => __DIR__ . '/../app/code/core/Mage/Sales/Model/Entity/Quote.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::markQuotesRecollect().',
-    'count' => 2,
-    'path' => __DIR__ . '/../app/code/core/Mage/Sales/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::markQuotesRecollectByAffectedProduct().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Sales/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::substractProductFromQuotes().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Sales/Model/Observer.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Call to an undefined method object::getEmail().',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Sales/Model/Order.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Call to an undefined method Mage_Catalog_Model_Product_Type_Abstract::getForceApplyDiscountToParentItem().',
