@@ -18,7 +18,7 @@ class Mage_Adminhtml_Helper_Dashboard_Order extends Mage_Adminhtml_Helper_Dashbo
 
     protected function _initCollection()
     {
-        $isFilter = $this->getParam('store') || $this->getParam('website') || $this->getParam('group');
+        $isFilter = (int) ($this->getParam('store') || $this->getParam('website') || $this->getParam('group'));
 
         $this->_collection = Mage::getResourceSingleton('reports/order_collection')
             ->prepareSummary($this->getParam('period'), 0, 0, $isFilter);
