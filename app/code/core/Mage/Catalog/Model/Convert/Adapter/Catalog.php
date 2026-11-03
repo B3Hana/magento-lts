@@ -19,7 +19,7 @@ class Mage_Catalog_Model_Convert_Adapter_Catalog extends Mage_Dataflow_Model_Con
     public function getResource()
     {
         if (!$this->_resource) {
-            $this->_resource = Mage::getResourceSingleton('catalog_entity/convert');
+            $this->_resource = Mage::getResourceSingleton('catalog/entity');
         }
 
         return $this->_resource;
@@ -30,20 +30,7 @@ class Mage_Catalog_Model_Convert_Adapter_Catalog extends Mage_Dataflow_Model_Con
      */
     public function load()
     {
-        $res = $this->getResource();
-
-        $this->setData([
-            'Products' => $res->exportProducts(),
-            'Categories' => $res->exportCategories(),
-            'Image Gallery' => $res->exportImageGallery(),
-            'Product Links' => $res->exportProductLinks(),
-            'Products in Categories' => $res->exportProductsInCategories(),
-            'Products in Stores' => $res->exportProductsInStores(),
-            'Attributes' => $res->exportAttributes(),
-            'Attribute Sets' => $res->exportAttributeSets(),
-            'Attribute Options' => $res->exportAttributeOptions(),
-        ]);
-
+        $this->setData([]);
         return $this;
     }
 
