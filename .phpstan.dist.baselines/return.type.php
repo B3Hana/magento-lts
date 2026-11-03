@@ -712,11 +712,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Category.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_Catalog_Model_Category::getTreeModelInstance() should return Mage_Catalog_Model_Resource_Category_Tree but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Category.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Catalog_Model_Category_Api::_getProductId() should return int but returns int<min, -1>|int<1, max>|string.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Category/Api.php',
@@ -730,11 +725,6 @@ $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Catalog_Model_Category_Api_V2::create() should return int but returns int|string|null.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Category/Api/V2.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Method Mage_Catalog_Model_Category_Indexer_Flat::_getIndexer() should return Mage_Catalog_Model_Resource_Category_Flat but returns object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Category/Indexer/Flat.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Method Mage_Catalog_Model_Convert_Adapter_Product::getStoreByCode() should return Mage_Core_Model_Store|false but returns Mage_Core_Model_Store|null.',

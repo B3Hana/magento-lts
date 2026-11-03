@@ -28,7 +28,7 @@ $ignoreErrors[] = [
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Only booleans are allowed in &&, Varien_Data_Tree_Node given on the left side.',
-    'count' => 2,
+    'count' => 5,
     'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Catalog/Category/Abstract.php',
 ];
 $ignoreErrors[] = [
@@ -43,7 +43,7 @@ $ignoreErrors[] = [
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Only booleans are allowed in &&, Varien_Data_Tree_Node given on the left side.',
-    'count' => 1,
+    'count' => 3,
     'path' => __DIR__ . '/../app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit/Tab/Categories.php',
 ];
 $ignoreErrors[] = [

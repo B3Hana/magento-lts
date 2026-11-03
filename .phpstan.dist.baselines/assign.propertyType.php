@@ -77,11 +77,6 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Api2/Model/Request/Internal.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Property Mage_Catalog_Block_Widget_Link::$_entityResource (Mage_Catalog_Model_Resource_Abstract|null) does not accept object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Block/Category/Widget/Link.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Property Mage_Catalog_Block_Product_View_Options::$_product (Mage_Catalog_Model_Product) does not accept Mage_Catalog_Model_Product|null.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Block/Product/View/Options.php',
@@ -107,19 +102,9 @@ $ignoreErrors[] = [
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Block/Product/Widget/Html/Pager.php',
 ];
 $ignoreErrors[] = [
-    'rawMessage' => 'Property Mage_Catalog_Block_Widget_Link::$_entityResource (Mage_Catalog_Model_Resource_Abstract|null) does not accept object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Block/Product/Widget/Link.php',
-];
-$ignoreErrors[] = [
     'rawMessage' => 'Property Mage_Catalog_Block_Widget_Link::$_anchorText (string) does not accept array|bool|string|null.',
     'count' => 1,
     'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Block/Widget/Link.php',
-];
-$ignoreErrors[] = [
-    'rawMessage' => 'Property Mage_Catalog_Model_Category::$_treeModel (Mage_Catalog_Model_Resource_Category_Tree|null) does not accept object.',
-    'count' => 1,
-    'path' => __DIR__ . '/../app/code/core/Mage/Catalog/Model/Category.php',
 ];
 $ignoreErrors[] = [
     'rawMessage' => 'Property Mage_Catalog_Model_Convert_Adapter_Product::$_galleryBackendModel (Mage_Catalog_Model_Product_Attribute_Backend_Media) does not accept Mage_Eav_Model_Entity_Attribute_Backend_Abstract.',
